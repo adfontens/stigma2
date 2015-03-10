@@ -14,6 +14,10 @@
 	$config["NAGIOS_DEFINE_SERVICE"] = "define service";
 	$config["NAGIOS_DEFINE_TIMEPERIOD"] = "define timeperiod";
 
+	$config["NAGIOS_STATUS_DAT"] = "/var/log/nagios/status.dat";
+	$config["NAGIOS_STATUS_HOST"] = "hoststatus";
+	$config["NAGIOS_STATUS_SERVICE"] = "servicestatus";
+
 	$GLOBALS["config"] = $config;
 
 ?>

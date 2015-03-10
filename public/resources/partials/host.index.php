@@ -17,10 +17,10 @@
 			<tbody>
 				<tr ng-repeat="host in hosts" ng-show="hosts.length">
 					<td><a ng-click="detailHost(host.object_uuid)">{{ host.host_name }}</a></td>
-					<td>{{ host.status }}</td>
+					<td>{{ host.current_state }}</td>
 					<td>{{ host.last_check }}</td>
 					<td>{{ host.duration }}</td>
-					<td>{{ host.info }}</td>
+					<td>{{ host.plugin_output }}</td>
 				</tr>
 				<tr ng-show="!hosts.length">
 					<td colspan="5"><strong>No hosts.</strong></td>

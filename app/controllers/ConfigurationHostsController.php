@@ -1,8 +1,6 @@
 <?php
 
 require dirname(__FILE__)."/../utils/config.inc.php";
-require dirname(__FILE__)."/../utils/nagios.objects.php";
-require dirname(__FILE__)."/../utils/UUID.php";
 
 class ConfigurationHostsController extends \BaseController {
 

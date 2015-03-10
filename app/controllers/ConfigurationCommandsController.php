@@ -1,7 +1,6 @@
 <?php
 
 require dirname(__FILE__)."/../utils/config.inc.php";
-require dirname(__FILE__)."/../utils/UUID.php";
 
 class ConfigurationCommandsController extends \BaseController {
 

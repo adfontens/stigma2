@@ -1,5 +1,7 @@
 <?php
 
+require dirname(__FILE__)."/../utils/config.inc.php";
+
 class HostsController extends \BaseController {
 
 	/**
@@ -111,42 +113,58 @@ class HostsController extends \BaseController {
 	}
 
 	private function getList() {
-		$query = array(
-			array("object_uuid" => "77ecae81-1cfd-4e50-b505-a081ff6238fc", "host_name" => "localhost1", "status" => "UP", "last_check" => "10-13-2014 06:24:01", "duration" => "0d 2h 18m 46s", "info" => "PING OK - Packet loss = 0%, RTA = 0.06 ms"),
-			array("object_uuid" => "d4efbd1f-4c39-476f-baa4-a296ddc19b60", "host_name" => "localhost2", "status" => "DOWN", "last_check" => "10-13-2014 06:24:01", "duration" => "0d 2h 18m 46s", "info" => "PING OK - Packet loss = 0%, RTA = 0.06 ms"),
-			array("object_uuid" => "f69c5016-97c0-494f-b7f2-2bd9b4e2643f", "host_name" => "localhost3", "status" => "UNREACHABLE", "last_check" => "10-13-2014 06:24:01", "duration" => "0d 2h 18m 46s", "info" => "PING OK - Packet loss = 0%, RTA = 0.06 ms"),
-			array("object_uuid" => "92b6e831-4afb-45c5-a0ef-586f6cb3e32d", "host_name" => "localhost4", "status" => "UP", "last_check" => "10-13-2014 06:24:01", "duration" => "0d 2h 18m 46s", "info" => "PING OK - Packet loss = 0%, RTA = 0.06 ms"),
-		);
+		global $config;
 
-		if (Input::has("type")) {
-			$type = Input::get("type");
+		$file = new NagiosStatus();
+		$filename = $config["NAGIOS_STATUS_DAT"];
+		$status = $file->read($filename);
+		$result = array();
 
-			switch ($type) {
-				case 'undefined':
-					break;
-				case '0':
-					$query = array(
-						array("object_uuid" => "77ecae81-1cfd-4e50-b505-a081ff6238fc", "host_name" => "localhost1", "status" => "UP", "last_check" => "10-13-2014 06:24:01", "duration" => "0d 2h 18m 46s", "info" => "PING OK - Packet loss = 0%, RTA = 0.06 ms"),
-						array("object_uuid" => "92b6e831-4afb-45c5-a0ef-586f6cb3e32d", "host_name" => "localhost4", "status" => "UP", "last_check" => "10-13-2014 06:24:01", "duration" => "0d 2h 18m 46s", "info" => "PING OK - Packet loss = 0%, RTA = 0.06 ms"),
-					);
-					break;
-				case '1':
-					$query = array(
-						array("object_uuid" => "d4efbd1f-4c39-476f-baa4-a296ddc19b60", "host_name" => "localhost2", "status" => "DOWN", "last_check" => "10-13-2014 06:24:01", "duration" => "0d 2h 18m 46s", "info" => "PING OK - Packet loss = 0%, RTA = 0.06 ms"),
-					);
-					break;
-				case '2':
-					$query = array(
-						array("object_uuid" => "f69c5016-97c0-494f-b7f2-2bd9b4e2643f", "host_name" => "localhost3", "status" => "UNREACHABLE", "last_check" => "10-13-2014 06:24:01", "duration" => "0d 2h 18m 46s", "info" => "PING OK - Packet loss = 0%, RTA = 0.06 ms"),
-					);
-					break;
-				default:
-					$query = array();
-					break;
+		foreach ($status as $k => $v) {
+			if (strcmp($v["type"], $config["NAGIOS_STATUS_HOST"]) === 0) {
+				array_push($result, $v["prop"]);
+				continue;
 			}
 		}
 
-		return $query;
+		return $result;
+
+		// $query = array(
+		// 	array("object_uuid" => "77ecae81-1cfd-4e50-b505-a081ff6238fc", "host_name" => "localhost1", "status" => "UP", "last_check" => "10-13-2014 06:24:01", "duration" => "0d 2h 18m 46s", "info" => "PING OK - Packet loss = 0%, RTA = 0.06 ms"),
+		// 	array("object_uuid" => "d4efbd1f-4c39-476f-baa4-a296ddc19b60", "host_name" => "localhost2", "status" => "DOWN", "last_check" => "10-13-2014 06:24:01", "duration" => "0d 2h 18m 46s", "info" => "PING OK - Packet loss = 0%, RTA = 0.06 ms"),
+		// 	array("object_uuid" => "f69c5016-97c0-494f-b7f2-2bd9b4e2643f", "host_name" => "localhost3", "status" => "UNREACHABLE", "last_check" => "10-13-2014 06:24:01", "duration" => "0d 2h 18m 46s", "info" => "PING OK - Packet loss = 0%, RTA = 0.06 ms"),
+		// 	array("object_uuid" => "92b6e831-4afb-45c5-a0ef-586f6cb3e32d", "host_name" => "localhost4", "status" => "UP", "last_check" => "10-13-2014 06:24:01", "duration" => "0d 2h 18m 46s", "info" => "PING OK - Packet loss = 0%, RTA = 0.06 ms"),
+		// );
+
+		// if (Input::has("type")) {
+		// 	$type = Input::get("type");
+
+		// 	switch ($type) {
+		// 		case 'undefined':
+		// 			break;
+		// 		case '0':
+		// 			$query = array(
+		// 				array("object_uuid" => "77ecae81-1cfd-4e50-b505-a081ff6238fc", "host_name" => "localhost1", "status" => "UP", "last_check" => "10-13-2014 06:24:01", "duration" => "0d 2h 18m 46s", "info" => "PING OK - Packet loss = 0%, RTA = 0.06 ms"),
+		// 				array("object_uuid" => "92b6e831-4afb-45c5-a0ef-586f6cb3e32d", "host_name" => "localhost4", "status" => "UP", "last_check" => "10-13-2014 06:24:01", "duration" => "0d 2h 18m 46s", "info" => "PING OK - Packet loss = 0%, RTA = 0.06 ms"),
+		// 			);
+		// 			break;
+		// 		case '1':
+		// 			$query = array(
+		// 				array("object_uuid" => "d4efbd1f-4c39-476f-baa4-a296ddc19b60", "host_name" => "localhost2", "status" => "DOWN", "last_check" => "10-13-2014 06:24:01", "duration" => "0d 2h 18m 46s", "info" => "PING OK - Packet loss = 0%, RTA = 0.06 ms"),
+		// 			);
+		// 			break;
+		// 		case '2':
+		// 			$query = array(
+		// 				array("object_uuid" => "f69c5016-97c0-494f-b7f2-2bd9b4e2643f", "host_name" => "localhost3", "status" => "UNREACHABLE", "last_check" => "10-13-2014 06:24:01", "duration" => "0d 2h 18m 46s", "info" => "PING OK - Packet loss = 0%, RTA = 0.06 ms"),
+		// 			);
+		// 			break;
+		// 		default:
+		// 			$query = array();
+		// 			break;
+		// 	}
+		// }
+
+		// return $query;
 	}
 
 }
