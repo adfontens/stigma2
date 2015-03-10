@@ -20,8 +20,11 @@
 				<tr ng-repeat="service in services" ng-show="services.length">
 					<td><a ng-click="detailHost(service.host_uuid)">{{ service.host_name }}</a></td>
 					<td><a ng-click="detailService(service.service_uuid)">{{ service.service_description }}</a></td>
-					<td>{{ service.current_state }}</td>
-					<td>{{ service.last_check }}</td>
+					<td ng-if="service.current_state === '0'">OK</td>
+					<td ng-if="service.current_state === '1'">Warning</td>
+					<td ng-if="service.current_state === '2'">Critical</td>
+					<td ng-if="service.current_state === '3'">Unknown</td>
+					<td>{{ service.last_check | date:'yyyy-MM-dd HH:mm:ss' }}</td>
 					<td>{{ service.duration }}</td>
 					<td>{{ service.current_attempt }} / {{ service.max_attempts }}</td>
 					<td>{{ service.plugin_output }}</td>
