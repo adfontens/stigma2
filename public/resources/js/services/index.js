@@ -3,6 +3,7 @@ define([
 	'./dashboardOverviewFactory',
 	'./directiveTimeperiodFactory',
 	'./hostFactory',
+	'./nagiosFactory',
 	'./serviceFactory',
 	'./systemConfigurationCommandFactory',
 	'./systemConfigurationHostFactory',

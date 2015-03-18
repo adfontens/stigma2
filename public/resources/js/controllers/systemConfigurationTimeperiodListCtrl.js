@@ -3,8 +3,8 @@ define(['./module', '../app-config'],
 		'use strict';
 
 		controllers.controller('SystemConfigurationTimeperiodListCtrl', [
-			'$scope', '$state', 'SystemConfigurationTimeperiodFactory',
-			function($scope, $state, SystemConfigurationTimeperiodFactory) {
+			'$scope', '$state', 'NagiosFactory', 'SystemConfigurationTimeperiodFactory',
+			function($scope, $state, NagiosFactory, SystemConfigurationTimeperiodFactory) {
 				$scope.createTimeperiod = function() {
 					$state.go('systemConfigurationTimeperiodCreation');
 				};
@@ -16,6 +16,7 @@ define(['./module', '../app-config'],
 				$scope.deleteTimeperiod = function(id) {
 					SystemConfigurationTimeperiodFactory.remove(id)
 						.success(function(data) {
+							NagiosFactory.restart();
 							SystemConfigurationTimeperiodFactory.list()
 								.then(function(timeperiods) {
 									$scope.timeperiods = timeperiods;

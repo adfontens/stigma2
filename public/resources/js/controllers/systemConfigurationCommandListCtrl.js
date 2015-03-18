@@ -3,8 +3,8 @@ define(['./module', '../app-config'],
 		'use strict';
 
 		controllers.controller('SystemConfigurationCommandListCtrl', [
-			'$scope', '$state', 'SystemConfigurationCommandFactory',
-			function($scope, $state, SystemConfigurationCommandFactory) {
+			'$scope', '$state', 'NagiosFactory', 'SystemConfigurationCommandFactory',
+			function($scope, $state, NagiosFactory, SystemConfigurationCommandFactory) {
 				$scope.createCommand = function() {
 					$state.go('systemConfigurationCommandCreation');
 				};
@@ -16,6 +16,7 @@ define(['./module', '../app-config'],
 				$scope.deleteCommand = function(id) {
 					SystemConfigurationCommandFactory.remove(id)
 						.success(function(data) {
+							NagiosFactory.restart();
 							SystemConfigurationCommandFactory.list()
 								.then(function(commands) {
 									$scope.commands = commands;

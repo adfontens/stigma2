@@ -3,8 +3,8 @@ define(['./module', '../app-config', './ngDraggableCtrl'],
 		'use strict';
 
 		controllers.controller('SystemConfigurationServiceCreationCtrl', [
-			'$scope', '$state', 'SystemConfigurationServiceFactory',
-			function($scope, $state, SystemConfigurationServiceFactory) {
+			'$scope', '$state', 'NagiosFactory', 'SystemConfigurationServiceFactory',
+			function($scope, $state, NagiosFactory, SystemConfigurationServiceFactory) {
 				draggable.setScope($scope);
 				draggable.init();
 				$scope.serviceData = {};
@@ -13,13 +13,12 @@ define(['./module', '../app-config', './ngDraggableCtrl'],
 					var params = {};
 
 					for (var i in $scope.serviceData) {
-						var key = $scope.use[i].name;
-						var value = $scope.serviceData[i];
-						params[key] = value;
+						params[i] = $scope.serviceData[i];
 					}
 
 					SystemConfigurationServiceFactory.save(params)
 						.success(function(data) {
+							NagiosFactory.restart();
 							$state.go('systemConfigurationServiceList');
 						})
 						.error(function(data) {

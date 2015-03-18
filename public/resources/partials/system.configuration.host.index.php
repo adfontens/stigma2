@@ -27,7 +27,6 @@
 				</div>
 			</div>
 		</div> -->
-		
 		<div class="form-inline text-right">
 			<i class="fa fa-search"></i> <input type="text" class="form-control" ng-model="search.host_name" placeholder="Search">
 		</div>

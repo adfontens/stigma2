@@ -3,8 +3,8 @@ define(['./module', '../app-config'],
 		'use strict';
 
 		controllers.controller('SystemConfigurationTimeperiodEditCtrl', [
-			'$compile', '$scope', '$state', 'DirectiveTimeperiodFactory', 'SystemConfigurationTimeperiodFactory',
-			function($compile, $scope, $state, DirectiveTimeperiodFactory, SystemConfigurationTimeperiodFactory) {
+			'$compile', '$scope', '$state', 'DirectiveTimeperiodFactory', 'NagiosFactory', 'SystemConfigurationTimeperiodFactory',
+			function($compile, $scope, $state, DirectiveTimeperiodFactory, NagiosFactory, SystemConfigurationTimeperiodFactory) {
 				$scope.count = 0;
 				$scope.preTimeperiodData = {};
 				$scope.timeperiodData = {};
@@ -25,6 +25,7 @@ define(['./module', '../app-config'],
 
 					SystemConfigurationTimeperiodFactory.update(id, params)
 						.success(function(data) {
+							NagiosFactory.restart();
 							$state.go('systemConfigurationTimeperiodList');
 						})
 						.error(function(data) {

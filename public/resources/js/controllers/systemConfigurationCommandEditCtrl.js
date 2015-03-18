@@ -3,13 +3,14 @@ define(['./module', '../app-config'],
 		'use strict';
 
 		controllers.controller('SystemConfigurationCommandEditCtrl', [
-			'$scope', '$state', 'SystemConfigurationCommandFactory',
-			function($scope, $state, SystemConfigurationCommandFactory) {
+			'$scope', '$state', 'NagiosFactory', 'SystemConfigurationCommandFactory',
+			function($scope, $state, NagiosFactory, SystemConfigurationCommandFactory) {
 				$scope.commandData = {};
 
 				$scope.updateCommand = function(id) {
 					SystemConfigurationCommandFactory.update(id, $scope.commandData)
 						.success(function(data) {
+							NagiosFactory.restart();
 							$state.go('systemConfigurationCommandList');
 						})
 						.error(function(data) {

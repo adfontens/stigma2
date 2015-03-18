@@ -61,7 +61,8 @@ class ConfigurationHostsController extends \BaseController {
 		));
 
 		Host::create(array(
-			"object_uuid" => $v4uuid
+			"object_uuid" => $v4uuid,
+			"description" => $input["alias"]
 		));
 
 		foreach ($input as $key => $value) {
@@ -73,7 +74,6 @@ class ConfigurationHostsController extends \BaseController {
 		}
 
 		$this->writeConfig();
-		// TODO nagios restart
 
 		return Response::json(array("success" => true));
 	}
@@ -156,10 +156,11 @@ class ConfigurationHostsController extends \BaseController {
 
 			if (strcmp($key, "host_name") === 0)
 				Object::where("uuid", "=", $object_uuid)->update(array("first_name" => $value));
+			if (strcmp($key, "alias") === 0)
+				Host::where("object_uuid", "=", $object_uuid)->update(array("description" => $value));
 		}
 
 		$this->writeConfig();
-		// TODO nagios restart
 
 		return Response::json(array("success" => true));
 	}
@@ -184,7 +185,6 @@ class ConfigurationHostsController extends \BaseController {
 		DB::table("objects")->where("uuid", "=", $object_uuid)->delete();
 
 		$this->writeConfig();
-		// TODO nagios restart
 
 		return Response::json(array("success" => true));
 	}

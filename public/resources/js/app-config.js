@@ -1,10 +1,12 @@
 define([], function() {
 	const CONTEXT_ROOT = '/stigma2';
 	const PARTIALS_ROOT = CONTEXT_ROOT + '/resources/partials/';
+	const NAGIOS_CGI_BIN = '/nagios/cgi-bin//cmd.cgi';
 
 	var configuration = {
 		home: CONTEXT_ROOT,
 		partial: PARTIALS_ROOT,
+		nagioscgi: NAGIOS_CGI_BIN,
 		route: [
 			{'state': 'otherwise', 'url': CONTEXT_ROOT, 'templateUrl': PARTIALS_ROOT + 'home.php', 'controller': 'HomeCtrl'},
 			{'state': 'home', 'url': CONTEXT_ROOT, 'templateUrl': PARTIALS_ROOT + 'home.php', 'controller': 'HomeCtrl'},

@@ -3,8 +3,8 @@ define(['./module', '../app-config'],
 		'use strict';
 
 		controllers.controller('SystemConfigurationServiceListCtrl', [
-			'$scope', '$state', 'SystemConfigurationServiceFactory',
-			function($scope, $state, SystemConfigurationServiceFactory) {
+			'$scope', '$state', 'NagiosFactory', 'SystemConfigurationServiceFactory',
+			function($scope, $state, NagiosFactory, SystemConfigurationServiceFactory) {
 				$scope.createService = function() {
 					$state.go('systemConfigurationServiceCreation');
 				};
@@ -16,6 +16,7 @@ define(['./module', '../app-config'],
 				$scope.deleteService = function(id) {
 					SystemConfigurationServiceFactory.remove(id)
 						.success(function(data) {
+							NagiosFactory.restart();
 							SystemConfigurationServiceFactory.list()
 								.then(function(services) {
 									$scope.services = services;

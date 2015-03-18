@@ -54,7 +54,6 @@ class ConfigurationCommandsController extends \BaseController {
 		));
 
 		$this->writeConfig();
-		// TODO nagios restart
 
 		return Response::json(array("success" => true));
 	}
@@ -111,7 +110,6 @@ class ConfigurationCommandsController extends \BaseController {
 			->update(array("command_line" => $command_line));
 
 		$this->writeConfig();
-		// TODO nagios restart
 
 		return Response::json(array("success" => true));
 	}
@@ -135,7 +133,6 @@ class ConfigurationCommandsController extends \BaseController {
 		DB::table("objects")->where("uuid", "=", $object_uuid)->delete();
 
 		$this->writeConfig();
-		// TODO nagios restart
 
 		return Response::json(array("success" => true));
 	}

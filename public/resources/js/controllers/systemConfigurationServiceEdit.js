@@ -3,23 +3,22 @@ define(['./module', '../app-config', './ngDraggableCtrl'],
 		'use strict';
 
 		controllers.controller('SystemConfigurationServiceEditCtrl', [
-			'$scope', '$state', 'SystemConfigurationServiceFactory',
-			function($scope, $state, SystemConfigurationServiceFactory) {
+			'$scope', '$state', 'NagiosFactory', 'SystemConfigurationServiceFactory',
+			function($scope, $state, NagiosFactory, SystemConfigurationServiceFactory) {
 				draggable.setScope($scope);
 				draggable.init();
 
 				$scope.updateService = function() {
 					var params = {};
 
-					for (var k in $scope.use) {
-						var key = $scope.use[k].name;
-						var value = $scope.serviceData[key];
-						params[key] = value;
+					for (var i in $scope.serviceData) {
+						params[i] = $scope.serviceData[i];
 					}
 
 					SystemConfigurationServiceFactory.update($state.params.id, params)
 						.success(function(data) {
-							$state.go('systemConfigurationServiceShow', {id: $state.params.id});
+							NagiosFactory.restart();
+							$state.go('systemConfigurationServiceList');
 						})
 						.error(function(data) {
 							console.log(data);

@@ -3,8 +3,8 @@ define(['./module', '../app-config', './ngDraggableCtrl'],
 		'use strict';
 
 		controllers.controller('SystemConfigurationHostCreationCtrl', [
-			'$scope', '$state', 'SystemConfigurationHostFactory',
-			function($scope, $state, SystemConfigurationHostFactory) {
+			'$scope', '$state', 'NagiosFactory', 'SystemConfigurationHostFactory',
+			function($scope, $state, NagiosFactory, SystemConfigurationHostFactory) {
 				draggable.setScope($scope);
 				draggable.init();
 				$scope.hostData = {};
@@ -13,13 +13,12 @@ define(['./module', '../app-config', './ngDraggableCtrl'],
 					var params = {};
 
 					for (var i in $scope.hostData) {
-						var key = $scope.use[i].name;
-						var value = $scope.hostData[i];
-						params[key] = value;
+						params[i] = $scope.hostData[i];
 					}
 
 					SystemConfigurationHostFactory.save(params)
 						.success(function(data) {
+							NagiosFactory.restart();
 							$state.go('systemConfigurationHostList');
 						})
 						.error(function(data) {

@@ -3,8 +3,8 @@ define(['./module', '../app-config'],
 		'use strict';
 
 		controllers.controller('SystemConfigurationHostListCtrl', [
-			'$scope', '$state', 'SystemConfigurationHostFactory', 'SystemConfigurationHostgroupFactory',
-			function($scope, $state, SystemConfigurationHostFactory, SystemConfigurationHostgroupFactory) {
+			'$scope', '$state', 'NagiosFactory', 'SystemConfigurationHostFactory', 'SystemConfigurationHostgroupFactory',
+			function($scope, $state, NagiosFactory, SystemConfigurationHostFactory, SystemConfigurationHostgroupFactory) {
 				// $scope.hasActive = false;
 				// $scope.hostgroup_name = '';
 				// $scope.hostgroup_uuid = '';
@@ -20,6 +20,7 @@ define(['./module', '../app-config'],
 				$scope.deleteHost = function(id) {
 					SystemConfigurationHostFactory.remove(id)
 						.success(function(data) {
+							NagiosFactory.restart();
 							SystemConfigurationHostFactory.list()
 								.then(function(hosts) {
 									$scope.hosts = hosts;
