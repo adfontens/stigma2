@@ -20,7 +20,7 @@
 					<td ng-if="host.current_state === '0'">Up</td>
 					<td ng-if="host.current_state === '1'">Down</td>
 					<td ng-if="host.current_state === '2'">Unreachable</td>
-					<td>{{ host.last_check | date:'yyyy-MM-dd HH:mm:ss' }}</td>
+					<td>{{ formatDate(host.last_check) }}</td>
 					<td>{{ host.duration }}</td>
 					<td>{{ host.plugin_output }}</td>
 				</tr>
