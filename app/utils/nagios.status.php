@@ -1,41 +1,39 @@
 <?php
 class NagiosStatus {
-	public function read($filename = null)
+	public function read($filename, $status)
 	{
-		if (file_exists($filename)) {
-			$lines = file($filename, FILE_IGNORE_NEW_LINES);
-			$objects = array();
-			$object;
+		$command = "awk '/".$status."/,/}/' ".$filename;
+		$awk = shell_exec($command);
 
-			foreach ($lines as $line) {
-				$line = trim($line);
-				$first = substr($line, 0, 1);
+		$lines = explode(PHP_EOL, $awk);
+		$objects = array();
+		$object;
 
-				if (strcmp($first, "") === 0 || strcmp($first, "#") === 0) continue;
-				if (strpos($line, "{")) {
-					$object = array();
-					$exploded = explode(" ", $line);
-					$type = substr($exploded[0], 0);
-					$object['type'] = $type;
-					continue;
-				}
-				if (strcmp($first, "}") === 0) {
-					array_push($objects, $object);
-					continue;
-				}
+		foreach ($lines as $line) {
+			$line = trim($line);
+			$first = substr($line, 0, 1);
 
-				$parts = preg_split('/=/', $line);
-				$key = $parts[0];
-				$value = "";
-				$delimiter = "";
-				for ($i = 1, $size = sizeof($parts); $i < $size; $i++) {
-					$value .= $delimiter.$parts[$i];
-					$delimiter = " = ";
-				}
-				$object['prop'][$key] = $value;
+			if (strcmp($first, "") === 0 || strcmp($first, "#") === 0) continue;
+			if (strpos($line, "{")) {
+				$object = array();
+				continue;
+			}
+			if (strcmp($first, "}") === 0) {
+				array_push($objects, $object);
+				continue;
 			}
 
-			return $objects;
+			$parts = preg_split('/=/', $line);
+			$key = $parts[0];
+			$value = "";
+			$delimiter = "";
+			for ($i = 1, $size = sizeof($parts); $i < $size; $i++) {
+				$value .= $delimiter.$parts[$i];
+				$delimiter = " = ";
+			}
+			$object[$key] = $value;
 		}
+
+		return $objects;
 	}
 }

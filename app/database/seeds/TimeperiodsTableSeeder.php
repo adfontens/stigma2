@@ -193,7 +193,7 @@ class TimeperiodsTableSeeder extends Seeder {
 		TimeperiodDetail::create([
 			'timeperiod_fk' => $uuid,
 			'key' => 'december 25',
-			'value' => '00:00-00:00     ; Christmas'
+			'value' => '00:00-00:00'
 		]);
 
 		$uuid = UUID::v4();
@@ -221,7 +221,7 @@ class TimeperiodsTableSeeder extends Seeder {
 		TimeperiodDetail::create([
 			'timeperiod_fk' => $uuid,
 			'key' => 'use',
-			'value' => 'us-holidays             ; Get holiday exceptions from other timeperiod'
+			'value' => 'us-holidays'
 		]);
 		TimeperiodDetail::create([
 			'timeperiod_fk' => $uuid,
