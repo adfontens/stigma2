@@ -25,7 +25,7 @@
 					<td ng-if="service.current_state === '2'">Critical</td>
 					<td ng-if="service.current_state === '3'">Unknown</td>
 					<td>{{ formatDate(service.last_check) }}</td>
-					<td>{{ service.duration }}</td>
+					<td>{{ formatDuration(service.last_state_change) }}</td>
 					<td>{{ service.current_attempt }} / {{ service.max_attempts }}</td>
 					<td>{{ service.plugin_output }}</td>
 				</tr>

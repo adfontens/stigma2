@@ -1,5 +1,5 @@
-define(['./module', '../app-config', './ngDraggableCtrl'],
-	function(controllers, appConfig, draggable) {
+define(['./module', './ngDraggableCtrl'],
+	function(controllers, draggable) {
 		'use strict';
 
 		controllers.controller('SystemConfigurationServiceCreationCtrl', [

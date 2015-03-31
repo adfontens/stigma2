@@ -21,7 +21,7 @@
 					<td ng-if="host.current_state === '1'">Down</td>
 					<td ng-if="host.current_state === '2'">Unreachable</td>
 					<td>{{ formatDate(host.last_check) }}</td>
-					<td>{{ host.duration }}</td>
+					<td>{{ formatDuration(host.last_state_change) }}</td>
 					<td>{{ host.plugin_output }}</td>
 				</tr>
 				<tr ng-show="!hosts.length">

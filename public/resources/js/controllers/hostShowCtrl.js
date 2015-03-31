@@ -1,5 +1,5 @@
-define(['./module', '../app-config'],
-	function(controllers, appConfig) {
+define(['./module'],
+	function(controllers) {
 		'use strict';
 
 		controllers.controller('HostShowCtrl', [
