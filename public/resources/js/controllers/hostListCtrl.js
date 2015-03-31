@@ -17,9 +17,12 @@ define(['./module', '../app-util'],
 					$state.go('hostShow', {uuid: uuid});
 				};
 
-				HostFactory.list($state.params)
+				HostFactory.list()
 					.then(function(data) {
 						$scope.hosts = data;
+						if (typeof($state.params.type) !== "undefined" && $state.params.type !== null) {
+							$scope.current_state = $state.params.type;
+						}
 					});
 			}
 		]);

@@ -15,16 +15,17 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat="host in hosts" ng-show="hosts.length">
+				<tr ng-repeat="host in filteredHosts = (hosts | filter: {current_state: current_state})" ng-show="filteredHosts.length">
 					<td><a ng-click="detailHost(host.object_uuid)">{{ host.host_name }}</a></td>
-					<td ng-if="host.current_state === '0'">Up</td>
+					<td ng-if="host.current_state === '0' && host.last_check !== '0'">Up</td>
 					<td ng-if="host.current_state === '1'">Down</td>
 					<td ng-if="host.current_state === '2'">Unreachable</td>
-					<td>{{ formatDate(host.last_check) }}</td>
-					<td>{{ formatDuration(host.last_state_change) }}</td>
-					<td>{{ host.plugin_output }}</td>
+					<td ng-if="host.current_state === '0' && host.last_check === '0'">Pending</td>
+					<td><span  ng-hide="host.last_check === '0'">{{ formatDate(host.last_check) }}</span></td>
+					<td><span  ng-hide="host.last_check === '0'">{{ formatDuration(host.last_state_change) }}</span></td>
+					<td><span  ng-hide="host.last_check === '0'">{{ host.plugin_output }}</span></td>
 				</tr>
-				<tr ng-show="!hosts.length">
+				<tr ng-show="!filteredHosts.length">
 					<td colspan="5"><strong>No hosts.</strong></td>
 				</tr>
 			</tbody>

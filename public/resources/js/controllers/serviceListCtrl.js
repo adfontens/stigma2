@@ -24,6 +24,9 @@ define(['./module', '../app-util'],
 				ServiceFactory.list($state.params)
 					.then(function(data) {
 						$scope.services = data;
+						if (typeof($state.params.type) !== "undefined" && $state.params.type !== null) {
+							$scope.current_state = $state.params.type;
+						}
 					});
 			}
 		]);
