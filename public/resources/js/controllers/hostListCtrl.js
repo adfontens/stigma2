@@ -20,9 +20,8 @@ define(['./module', '../app-util'],
 				HostFactory.list()
 					.then(function(data) {
 						$scope.hosts = data;
-						if (typeof($state.params.type) !== "undefined" && $state.params.type !== null) {
-							$scope.current_state = $state.params.type;
-						}
+						$scope.current_state = $state.params.current_state;
+						$scope.has_been_checked = $state.params.has_been_checked;
 					});
 			}
 		]);

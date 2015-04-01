@@ -32,21 +32,21 @@
 		<p>
 		<div class="panel panel-default">
 			<div class="panel-heading">Host</div>
-			<div class="panel-body"><a ui-sref="hostList({type:''})">All</a></div>
-			<div class="panel-body"><a ui-sref="hostList({type:'0'})">Up</a></div>
-			<div class="panel-body"><a ui-sref="hostList({type:'1'})">Down</a></div>
-			<div class="panel-body"><a ui-sref="hostList({type:'2'})">Unreachable</a></div>
-			<div class="panel-body">Pending</div>
+			<div class="panel-body"><a ui-sref="hostList({current_state:'', has_been_checked:''})">All</a></div>
+			<div class="panel-body"><a ui-sref="hostList({current_state:'0', has_been_checked:'1'})">Up</a></div>
+			<div class="panel-body"><a ui-sref="hostList({current_state:'1', has_been_checked:'1'})">Down</a></div>
+			<div class="panel-body"><a ui-sref="hostList({current_state:'2', has_been_checked:'1'})">Unreachable</a></div>
+			<div class="panel-body"><a ui-sref="hostList({current_state:'0', has_been_checked:'0'})">Pending</a></div>
 		</div>
 		<p>
 		<div class="panel panel-default">
 			<div class="panel-heading">Service</div>
-			<div class="panel-body"><a ui-sref="serviceList({type:''})">All</a></div>
-			<div class="panel-body"><a ui-sref="serviceList({type:'0'})">OK</a></div>
-			<div class="panel-body"><a ui-sref="serviceList({type:'1'})">Warning</a></div>
-			<div class="panel-body"><a ui-sref="serviceList({type:'2'})">Critical</a></div>
-			<div class="panel-body"><a ui-sref="serviceList({type:'3'})">Unknown</a></div>
-			<div class="panel-body">Pending</div>
+			<div class="panel-body"><a ui-sref="serviceList({current_state:'', has_been_checked:''})">All</a></div>
+			<div class="panel-body"><a ui-sref="serviceList({current_state:'0', has_been_checked:'1'})">OK</a></div>
+			<div class="panel-body"><a ui-sref="serviceList({current_state:'1', has_been_checked:'1'})">Warning</a></div>
+			<div class="panel-body"><a ui-sref="serviceList({current_state:'2', has_been_checked:'1'})">Critical</a></div>
+			<div class="panel-body"><a ui-sref="serviceList({current_state:'3', has_been_checked:'1'})">Unknown</a></div>
+			<div class="panel-body"><a ui-sref="serviceList({current_state:'0', has_been_checked:'0'})">Pending</a></div>
 		</div>
 		<p>
 		<div class="panel panel-warning">
