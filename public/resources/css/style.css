@@ -15,8 +15,12 @@ textarea {
 /* aside Area Start */
 .sidebar {
     float: left;
-    width: 20%;
+    width: 13%;
     padding-left: 20px;
+}
+
+.panel-body {
+    padding: 7px;
 }
 /* aside Area End */
 
@@ -25,7 +29,7 @@ textarea {
 /* main Area Start */
 .mainContents {
     float: left;
-    width: 80%;
+    width: 87%;
     padding-left: 10px;
     padding-right: 20px;
 }
