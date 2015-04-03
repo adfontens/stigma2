@@ -12,10 +12,10 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td style="width: 25%;">{{ host.down }} Down</td>
-					<td style="width: 25%;">{{ host.unreachable }} Unreachable</td>
-					<td style="width: 25%;">{{ host.up }} Up</td>
-					<td style="width: 25%;">{{ host.pending }} Pending</td>
+					<td style="width: 25%;">{{ overviewData.host.down }} Down</td>
+					<td style="width: 25%;">{{ overviewData.host.unreachable }} Unreachable</td>
+					<td style="width: 25%;">{{ overviewData.host.up }} Up</td>
+					<td style="width: 25%;">{{ overviewData.host.pending }} Pending</td>
 				</tr>
 			</tbody>
 		</table>
@@ -28,11 +28,11 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td style="width: 20%;">{{ service.critical }} Critical</td>
-					<td style="width: 20%;">{{ service.warning }} Warning</td>
-					<td style="width: 20%;">{{ service.unknown }} Unknown</td>
-					<td style="width: 20%;">{{ service.ok }} Ok</td>
-					<td style="width: 20%;">{{ service.pending }} Pending</td>
+					<td style="width: 20%;">{{ overviewData.service.critical }} Critical</td>
+					<td style="width: 20%;">{{ overviewData.service.warning }} Warning</td>
+					<td style="width: 20%;">{{ overviewData.service.unknown }} Unknown</td>
+					<td style="width: 20%;">{{ overviewData.service.ok }} Ok</td>
+					<td style="width: 20%;">{{ overviewData.service.pending }} Pending</td>
 				</tr>
 			</tbody>
 		</table>

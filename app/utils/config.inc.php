@@ -18,6 +18,15 @@
 	$config["NAGIOS_STATUS_HOST"] = "hoststatus";
 	$config["NAGIOS_STATUS_SERVICE"] = "servicestatus";
 
+	$config["OVERVIEW_HOSTS_STATUS"] = "Hosts Up\/Down\/Unreach";
+	$config["OVERVIEW_HOSTS_STATUS_POS"] = "Hosts Up/Down/Unreach";
+	$config["OVERVIEW_SERVICES_STATUS"] = "Services Ok\/Warn\/Unk\/Crit";
+	$config["OVERVIEW_SERVICES_STATUS_POS"] = "Services Ok/Warn/Unk/Crit";
+	$config["OVERVIEW_TOTAL_HOSTS"] = "Total Hosts";
+	$config["OVERVIEW_TOTAL_SERVICES"] = "Total Services";
+	$config["OVERVIEW_HOSTS_CHECKED"] = "Hosts Checked";
+	$config["OVERVIEW_SERVICES_CHECKED"] = "Services Checked";
+
 	$GLOBALS["config"] = $config;
 
 ?>

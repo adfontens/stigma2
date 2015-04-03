@@ -1,5 +1,7 @@
 <?php
 
+require dirname(__FILE__)."/../utils/config.inc.php";
+
 class OverviewController extends \BaseController {
 
 	/**
@@ -10,12 +12,47 @@ class OverviewController extends \BaseController {
 	 */
 	public function index()
 	{
-		$host = array("down" => 0, "unreachable" => 0, "up" => 1, "pending" => 0);
-		$service = array("critical" => 1, "warning" => 2, "unknown" => 1, "ok" => 6, "pending" => 0);
+		global $config;
+
+		$command = "nagiostats | awk '/"
+				.$config["OVERVIEW_SERVICES_STATUS"]
+				."/ || /".$config["OVERVIEW_HOSTS_STATUS"]
+				."/ || /".$config["OVERVIEW_TOTAL_SERVICES"]
+				."/ || /".$config["OVERVIEW_SERVICES_CHECKED"]
+				."/ || /".$config["OVERVIEW_TOTAL_HOSTS"]
+				."/ || /".$config["OVERVIEW_HOSTS_CHECKED"]
+				."/'";
+		$awk = shell_exec($command);
+		$lines = explode(PHP_EOL, $awk);
+		$memory = array();
+		$result = array();
+
+		foreach ($lines as $line) {
+			$line = trim($line);
+			if ($line === "") continue;
+			$parts = preg_split('/:/', $line);
+			$memory[$parts[0]] = $parts[1];
+		}
+		
+		$hostTacticals = preg_split('/\//', $memory[$config["OVERVIEW_HOSTS_STATUS_POS"]]);
+		$serviceTacticals = preg_split('/\//', $memory[$config["OVERVIEW_SERVICES_STATUS_POS"]]);
+		$hostPending = intval($config["OVERVIEW_TOTAL_HOSTS"]) - intval($config["OVERVIEW_HOSTS_CHECKED"]);
+		$servicePending = intval($config["OVERVIEW_TOTAL_SERVICES"]) - intval($config["OVERVIEW_SERVICES_CHECKED"]);
 
 		$result = array(
-			"host" => $host,
-			"service" => $service
+			"host" => array(
+				"up" => trim($hostTacticals[0]),
+				"down" => trim($hostTacticals[1]),
+				"unreachable" => trim($hostTacticals[2]),
+				"pending" => $hostPending
+			),
+			"service" => array(
+				"ok" => trim($serviceTacticals[0]),
+				"warning" => trim($serviceTacticals[1]),
+				"unknown" => trim($serviceTacticals[2]),
+				"critical" => trim($serviceTacticals[3]),
+				"pending" => $servicePending
+			)
 		);
 
 		return Response::json($result);
