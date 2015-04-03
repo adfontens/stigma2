@@ -5,12 +5,12 @@ define([], function() {
 
 		var year = formatDate.getFullYear();
 		var month = months[formatDate.getMonth()];
-		var date = formatDate.getDate();
+		var date = '0' + formatDate.getDate();
 		var hour = formatDate.getHours();
 		var min = '0' + formatDate.getMinutes();
 		var sec = '0' + formatDate.getSeconds();
 
-		var time = year + '-' + month + '-' + date + ' ' + hour + ':' + min.substr(min.length-2) + ':' + sec.substr(sec.length-2);
+		var time = year + '-' + month + '-' + date.substr(date.length-2) + ' ' + hour + ':' + min.substr(min.length-2) + ':' + sec.substr(sec.length-2);
 		return time;
 	};
 
