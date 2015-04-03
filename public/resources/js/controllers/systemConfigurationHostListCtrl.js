@@ -28,10 +28,6 @@ define(['./module'],
 						});
 				};
 
-				$scope.listService = function(host_object_uuid) {
-					$state.go('systemConfigurationServiceList', {host_object_uuid: host_object_uuid});
-				};
-
 				// $scope.clickHostgroup = function(group) {
 				// 	var buttons = angular.element('div[data-toggle="buttons"]').children();
 				// 	buttons.removeClass('active');

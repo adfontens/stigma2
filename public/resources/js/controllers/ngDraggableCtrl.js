@@ -20,15 +20,15 @@ define([], function() {
 			}
 		}
 		$scope.onDragSuccess2=function(data,evt){
-			var index = $scope.disuse.indexOf(data);
+			var index = $scope.nonuse.indexOf(data);
 			if (index > -1) {
-				$scope.disuse.splice(index, 1);
+				$scope.nonuse.splice(index, 1);
 			}
 		}
 		$scope.onDropComplete2=function(data,evt){
-			var index = $scope.disuse.indexOf(data);
+			var index = $scope.nonuse.indexOf(data);
 			if (index == -1) {
-				$scope.disuse.push(data);
+				$scope.nonuse.push(data);
 			}
 		}
 	}

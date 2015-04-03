@@ -45,7 +45,7 @@
 			<tbody>
 				<tr ng-repeat="host in hosts | filter:search" ng-show="hosts.length">
 					<!-- <td><input type="checkbox" name="{{host.object_uuid}}" value="{{host.object_uuid}}"></td> -->
-					<td class="listTdOverflow" style="vertical-align: middle;"><a ng-click="listService(host.object_uuid)">{{ host.host_name }}</a></td>
+					<td class="listTdOverflow" style="vertical-align: middle;">{{ host.host_name }}</td>
 					<td class="listTdOverflow" style="vertical-align: middle;">{{ host.description }}</td>
 					<td><a ng-click="editHost(host.id)" class="btn btn-small btn-primary">edit</a></td>
 					<td><a ng-click="deleteHost(host.id)" class="btn btn-small btn-danger">delete</a></td>

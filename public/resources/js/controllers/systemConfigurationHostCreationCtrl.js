@@ -33,7 +33,7 @@ define(['./module', './ngDraggableCtrl'],
 				SystemConfigurationHostFactory.create()
 					.then(function(data) {
 						$scope.use = data.use;
-						$scope.disuse = data.disuse;
+						$scope.nonuse = data.nonuse;
 					});
 			}
 		]);

@@ -8,6 +8,10 @@ define(['./implement', './module', '../app-config'],
 					var url = appConfig.getConfiguration().home + '/api/configuration/hostgroups';
 					return implement.httpGetServiceImpl($http, url);
 				},
+				create: function() {
+					var url = appConfig.getConfiguration().home + '/api/configuration/hostgroups/create';
+					return implement.httpGetServiceImpl($http, url);
+				},
 				save: function(params) {
 					var url = appConfig.getConfiguration().home + '/api/configuration/hostgroups';
 					return implement.httpServiceImpl($http, 'POST', params, url);

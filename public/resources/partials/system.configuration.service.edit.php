@@ -30,21 +30,19 @@
 	        
 			<div class="row">
 				<div>
-					<div class="ng-drop-title"><span class="ng-drop-title">사용</span></div>
-					<div class="ng-drop-title"><span class="ng-drop-title-right">사용안함</span></div>
+					<div class="ng-drop-title"><span class="ng-drop-title">Use</span></div>
+					<div class="ng-drop-title"><span class="ng-drop-title-right">Nonuse</span></div>
 				</div>
 				<div ng-drop="true" ng-drop-success="onDropComplete1($data,$event)">
 					<div ng-repeat="obj in use" ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragSuccess1($data,$event)">
 						{{obj.name}}
 					</div>
-
 				</div>
 
 				<div ng-drop="true" ng-drop-success="onDropComplete2($data,$event)">
-					<div ng-repeat="obj in disuse" ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragSuccess2($data,$event)">
+					<div ng-repeat="obj in nonuse" ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragSuccess2($data,$event)">
 						{{obj.name}}
 					</div>
-
 				</div> 
 			</div>
 		</div>

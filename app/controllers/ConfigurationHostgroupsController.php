@@ -23,7 +23,19 @@ class ConfigurationHostgroupsController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		$hosts = DB::table("objects")->select("first_name")->where("object_type", "=", "1")->get();
+		$nonuse = array();
+
+		foreach ($hosts as $host) {
+			array_push($nonuse, $host->first_name);
+		}
+
+		$result = array(
+			"use" => array(),
+			"nonuse" => $nonuse
+		);
+
+		return Response::json($result);
 	}
 
 	/**
@@ -45,7 +57,8 @@ class ConfigurationHostgroupsController extends \BaseController {
 		));
 
 		Hostgroup::create(array(
-			"object_uuid" => $v4uuid
+			"object_uuid" => $v4uuid,
+			"description" => $input["alias"]
 		));
 
 		foreach ($input["members"] as $value) {
@@ -126,7 +139,7 @@ class ConfigurationHostgroupsController extends \BaseController {
 	{
 		$query = DB::table("hostgroups")
 				->join("objects", "hostgroups.object_uuid", "=", "objects.uuid")
-				->select("hostgroups.id", "hostgroups.object_uuid", "objects.first_name as hostgroup_name")
+				->select("hostgroups.id", "hostgroups.object_uuid", "hostgroups.description", "objects.first_name as hostgroup_name")
 				->orderBy("hostgroups.created_at", "desc");
 		return $query->get();
 	}

@@ -14,6 +14,8 @@ define([
 	'./systemConfigurationHostListCtrl',
 	'./systemConfigurationHostCreationCtrl',
 	'./systemConfigurationHostEditCtrl',
+	'./SystemConfigurationHostgroupListCtrl',
+	'./SystemConfigurationHostgroupCreationCtrl',
 	'./systemConfigurationServiceListCtrl',
 	'./systemConfigurationServiceCreationCtrl',
 	'./systemConfigurationServiceEdit',

@@ -24,10 +24,6 @@ define(['./module'],
 						});
 				};
 
-				$scope.listHost = function(object_uuid) {
-					$state.go('systemConfigurationHostList', {object_uuid: object_uuid});
-				};
-
 				SystemConfigurationServiceFactory.list($state.params)
 					.then(function(data) {
 						$scope.services = data;

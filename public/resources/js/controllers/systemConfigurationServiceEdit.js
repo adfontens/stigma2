@@ -34,7 +34,7 @@ define(['./module', './ngDraggableCtrl'],
 						$scope.serviceData = data.serviceData;
 						$scope.serviceDetail = data.serviceDetail;
 						$scope.use = data.use;
-						$scope.disuse = data.disuse;
+						$scope.nonuse = data.nonuse;
 					});
 			}
 		]);

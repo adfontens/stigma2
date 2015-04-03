@@ -27,16 +27,16 @@ class ConfigurationServicesController extends \BaseController {
 	{
 		$nagiosService = NagiosObjects::service();
 		$use = array();
-		$disuse = array();
+		$nonuse = array();
 
 		foreach ($nagiosService as $nagiosProp) {
 			if ($nagiosProp["required"] == "Y") array_push($use, $nagiosProp);
-			else array_push($disuse, $nagiosProp);
+			else array_push($nonuse, $nagiosProp);
 		}
 
 		$result = array(
 			"use" => $use,
-			"disuse" => $disuse
+			"nonuse" => $nonuse
 		);
 
 		return Response::json($result);
@@ -115,7 +115,7 @@ class ConfigurationServicesController extends \BaseController {
 		$keys = array();
 		$serviceData = array();
 		$use = array();
-		$disuse = array();
+		$nonuse = array();
 
 		foreach ($serviceDetail as $prop) {
 			array_push($keys, $prop->key);
@@ -123,14 +123,14 @@ class ConfigurationServicesController extends \BaseController {
 		}
 		foreach ($nagiosService as $nagiosProp) {
 			if (in_array($nagiosProp["name"], $keys)) array_push($use, $nagiosProp);
-			else array_push($disuse, $nagiosProp);
+			else array_push($nonuse, $nagiosProp);
 		}
 
 		$result = array(
 			"serviceData" => $serviceData,
 			"serviceDetail" => $serviceDetail,
 			"use" => $use,
-			"disuse" => $disuse
+			"nonuse" => $nonuse
 		);
 
 		return Response::json($result);

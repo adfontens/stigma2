@@ -5,7 +5,7 @@ define(['./module'],
 		controllers.controller('SystemConfigurationListCtrl', [
 			'$scope', '$state',
 			function($scope, $state) {
-				$scope.objects = [{ 'value' : '1', 'text' : 'Hosts' }, { 'value' : '2', 'text' : 'Services' }, {'value' : '9', 'text' : 'Timeperiods'}, { 'value' : '12', 'text' : 'Commands' }];
+				$scope.objects = [{ 'value' : '1', 'text' : 'Hosts' }, { 'value' : '2', 'text' : 'Services' }, { 'value' : '3', 'text' : 'Hostgroups' }, { 'value' : '4', 'text' : 'Servicegroups' }, {'value' : '9', 'text' : 'Timeperiods'}, { 'value' : '12', 'text' : 'Commands' }];
 				$scope.type = $scope.objects[0];
 
 				$scope.continueToNextStep = function() {
@@ -14,6 +14,10 @@ define(['./module'],
 							$state.go('systemConfigurationHostList'); break;
 						case '2' :
 							$state.go('systemConfigurationServiceList'); break;
+						case '3' :
+							$state.go('systemConfigurationHostgroupList'); break;
+						// case '4' :
+						// 	$state.go('systemConfigurationServiceList'); break;
 						case '9' :
 							$state.go('systemConfigurationTimeperiodList'); break;
 						case '12' :

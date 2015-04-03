@@ -27,16 +27,16 @@ class ConfigurationHostsController extends \BaseController {
 	{
 		$nagiosHost = NagiosObjects::host();
 		$use = array();
-		$disuse = array();
+		$nonuse = array();
 
 		foreach ($nagiosHost as $nagiosProp) {
 			if ($nagiosProp["required"] == "Y") array_push($use, $nagiosProp);
-			else array_push($disuse, $nagiosProp);
+			else array_push($nonuse, $nagiosProp);
 		}
 
 		$result = array(
 			"use" => $use,
-			"disuse" => $disuse
+			"nonuse" => $nonuse
 		);
 
 		return Response::json($result);
@@ -111,7 +111,7 @@ class ConfigurationHostsController extends \BaseController {
 		$keys = array();
 		$hostData = array();
 		$use = array();
-		$disuse = array();
+		$nonuse = array();
 
 		foreach ($hostDetail as $prop) {
 			array_push($keys, $prop->key);
@@ -119,14 +119,14 @@ class ConfigurationHostsController extends \BaseController {
 		}
 		foreach ($nagiosHost as $nagiosProp) {
 			if (in_array($nagiosProp["name"], $keys)) array_push($use, $nagiosProp);
-			else array_push($disuse, $nagiosProp);
+			else array_push($nonuse, $nagiosProp);
 		}
 
 		$result = array(
 			"hostData" => $hostData,
 			"hostDetail" => $hostDetail,
 			"use" => $use,
-			"disuse" => $disuse
+			"nonuse" => $nonuse
 		);
 
 		return Response::json($result);

@@ -34,7 +34,7 @@ define(['./module', './ngDraggableCtrl'],
 						$scope.hostData = data.hostData;
 						$scope.hostDetail = data.hostDetail;
 						$scope.use = data.use;
-						$scope.disuse = data.disuse;
+						$scope.nonuse = data.nonuse;
 					});
 			}
 		]);
