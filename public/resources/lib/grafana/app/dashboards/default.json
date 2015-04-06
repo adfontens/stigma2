@@ -6,31 +6,13 @@
   "editable": true,
   "rows": [
     {
-      "title": "New row",
-      "height": "150px",
-      "collapse": false,
-      "editable": true,
-      "panels": [
-        {
-          "id": 1,
-          "span": 12,
-          "editable": true,
-          "type": "text",
-          "mode": "html",
-          "content": "<div class=\"text-center\" style=\"padding-top: 15px\">\n<img src=\"img/logo_transparent_200x.png\"> \n</div>",
-          "style": {},
-          "title": "Welcome to"
-        }
-      ]
-    },
-    {
       "title": "Monitor 1",
       "height": "250px",
       "collapse": false,
       "editable": true,
       "panels": [
         {
-          "id": 2,
+          "id": 1,
           "span": 6,
           "type": "graph",
           "x-axis": true,
@@ -103,7 +85,7 @@
           }
         },
         {
-          "id": 3,
+          "id": 2,
           "span": 6,
           "type": "graph",
           "x-axis": true,
@@ -189,7 +171,7 @@
       "collapse": false,
       "panels": [
         {
-          "id": 6,
+          "id": 3,
           "span": 12,
           "type": "graph",
           "x-axis": true,
