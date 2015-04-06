@@ -17,25 +17,24 @@ define(['settings'], function(Settings) {
       */
 
       // InfluxDB example setup (the InfluxDB databases specified need to exist)
-      /*
       datasources: {
         influxdb: {
           type: 'influxdb',
-          url: "http://my_influxdb_server:8086/db/database_name",
+          url: "http://106.243.87.166:8086/db/stigma2",
           username: 'admin',
           password: 'admin',
         },
         grafana: {
           type: 'influxdb',
-          url: "http://my_influxdb_server:8086/db/grafana",
+          url: "http://106.243.87.166:8086/db/grafana",
           username: 'admin',
           password: 'admin',
           grafanaDB: true
         },
       },
-      */
 
       // Graphite & Elasticsearch example setup
+      /*
       datasources: {
         graphite: {
           type: 'graphite',
@@ -48,6 +47,7 @@ define(['settings'], function(Settings) {
           grafanaDB: true,
         }
       },
+      */
 
       // OpenTSDB & Elasticsearch example setup
       /*
