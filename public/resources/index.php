@@ -61,7 +61,6 @@
 		</div>
 	</aside>
 	<article class="mainContents">
-		<!-- <div ui-view autoscroll="true"></div> -->
 		<div ui-view></div>
 	</article>
 	<footer class="text-center footerbar">
