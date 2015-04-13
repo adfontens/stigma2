@@ -53,6 +53,7 @@ class ConfigurationHostgroupsController extends \BaseController {
 			"uuid" => $v4uuid,
 			"object_type" => "3",
 			"first_name" => $input["hostgroup_name"],
+			"second_name" => "",
 			"is_active" => "1"
 		));
 
@@ -68,11 +69,10 @@ class ConfigurationHostgroupsController extends \BaseController {
 			));
 		}
 
-		// $this->writeConfig();
+		$this->writeConfig();
 		// TODO nagios restart
 
-		$hostgroups = $this->getList();
-		return Response::json(array("success" => true, "hostgroups" => $hostgroups));
+		return Response::json(array("success" => true));
 	}
 
 	/**
@@ -142,6 +142,44 @@ class ConfigurationHostgroupsController extends \BaseController {
 				->select("hostgroups.id", "hostgroups.object_uuid", "hostgroups.description", "objects.first_name as hostgroup_name")
 				->orderBy("hostgroups.created_at", "desc");
 		return $query->get();
+	}
+
+	private function writeConfig()
+	{
+		global $config;
+
+		$file = $config["NAGIOS_OBJECTS_DIR"].$config["NAGIOS_HOSTS_CFG"];
+		$hosts = DB::table("host_details")->get();
+		$contents = "";
+		$objects = array();
+
+		if (file_exists($file)) {
+			unlink($file);
+		}
+
+		foreach ($hosts as $host)
+		{
+			$host_fk = $host->host_fk;
+			$object = array();
+			if (array_key_exists($host_fk, $objects)) $object = $objects[$host_fk];
+
+			$object[$host->key] = $host->value;
+			$objects[$host_fk] = $object;
+		}
+
+		foreach (array_keys($objects) as $host_fk)
+		{
+			$object = $objects[$host_fk];
+			$contents .= $config["NAGIOS_DEFINE_HOST"]."{\n";
+			
+			foreach (array_keys($object) as $key)
+			{
+				$contents .= "\t".$key."\t".$object[$key]."\n";
+			}
+			$contents .= "}\n\n";
+		}
+
+		file_put_contents($file, $contents, FILE_APPEND | LOCK_EX);
 	}
 
 }

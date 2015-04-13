@@ -26,7 +26,7 @@ define(['./module'],
 
 				SystemConfigurationHostgroupFactory.list($state.params)
 					.then(function(data) {
-						$scope.hosts = data;
+						$scope.hostgroups = data;
 					});
 			}
 		]);

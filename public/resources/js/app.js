@@ -1,4 +1,4 @@
-define(['angular', './controllers/index', './directives/index', './services/index', 'ngDraggable', 'ui.router'], //'./filters/index', 
+define(['angular', './controllers/index', './directives/index', './services/index', 'ngDraggable', 'ui.bootstrap', 'ui.bootstrap.tpls', 'ui.router'], //'./filters/index', 
 	function(angular) {
 		'use strict';
 
@@ -8,6 +8,8 @@ define(['angular', './controllers/index', './directives/index', './services/inde
 			// 'app.filters',
 			'app.services',
 			'ngDraggable',
+			'ui.bootstrap',
+			'ui.bootstrap.tpls',
 			'ui.router'
 		]);
 	}
