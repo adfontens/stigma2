@@ -1,4 +1,5 @@
 define([
+	'./dashboardGlusterfsListCtrl',
 	'./dashboardOverviewListCtrl',
 	'./homeCtrl',
 	'./hostListCtrl',
