@@ -64,6 +64,7 @@ return array(
     'File_X509' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/X509.php',
     'GlusterfsBrickController' => $baseDir . '/app/controllers/GlusterfsBrickController.php',
     'GlusterfsNodeController' => $baseDir . '/app/controllers/GlusterfsNodeController.php',
+    'GlusterfsWorkbenchController' => $baseDir . '/app/controllers/GlusterfsWorkbenchController.php',
     'HomeController' => $baseDir . '/app/controllers/HomeController.php',
     'Host' => $baseDir . '/app/models/Host.php',
     'HostDetail' => $baseDir . '/app/models/HostDetail.php',

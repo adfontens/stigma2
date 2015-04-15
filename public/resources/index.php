@@ -27,7 +27,7 @@
 	<aside class="sidebar">
 		<div class="panel panel-primary">
 			<div class="panel-heading">Dashboard</div>
-			<div class="panel-body"><a ui-sref="dashboardOverviewList">Overview</a></div>
+			<!-- <div class="panel-body"><a ui-sref="dashboardOverviewList">Overview</a></div> -->
 			<div class="panel-body"><a ui-sref="dashboardGlusterfsList">GlusterFS</a></div>
 		</div>
 		<p>

@@ -2,6 +2,7 @@ define([
 	'./accountFactory',
 	'./dashboardGlusterfsBrickFactory',
 	'./dashboardGlusterfsNodeFactory',
+	'./dashboardGlusterfsWorkbenchFactory',
 	'./dashboardOverviewFactory',
 	'./directiveTimeperiodFactory',
 	'./hostFactory',

@@ -21,6 +21,7 @@
 									<span ng-if="brick.status === '0'" class="btn btn-small btn-success" style="width: 50px;">{{brick.name}}</span>
 									<span ng-if="brick.status === '1'" class="btn btn-small btn-warning" style="width: 50px;">{{brick.name}}</span>
 									<span ng-if="brick.status === '2'" class="btn btn-small btn-danger" style="width: 50px;">{{brick.name}}</span>
+									<span ng-if="brick.status === '9'" class="btn btn-small btn-default" style="width: 50px; disabled">{{brick.name}}</span>
 								</div>
 							</td>
 							<td style="width: 75px; text-align: center;">{{bricks.length}}</td>

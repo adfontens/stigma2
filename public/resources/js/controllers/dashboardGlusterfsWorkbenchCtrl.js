@@ -3,9 +3,12 @@ define(['./module'],
 		'use strict';
 
 		controllers.controller('DashboardGlusterfsWorkbenchCtrl', [
-			'$scope',
-			function($scope) {
-				//
+			'$scope', 'DashboardGlusterfsWorkbenchFactory',
+			function($scope, DashboardGlusterfsWorkbenchFactory) {
+				DashboardGlusterfsWorkbenchFactory.list()
+					.then(function(data) {
+						$scope.glusterfsWorkbenchData = data;
+					});
 			}
 		]);
 	}
