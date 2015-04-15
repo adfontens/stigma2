@@ -3,9 +3,12 @@ define(['./module'],
 		'use strict';
 
 		controllers.controller('DashboardGlusterfsNodeCtrl', [
-			'$scope',
-			function($scope) {
-				//
+			'$scope', 'DashboardGlusterfsNodeFactory',
+			function($scope, DashboardGlusterfsNodeFactory) {
+				DashboardGlusterfsNodeFactory.list()
+					.then(function(data) {
+						$scope.nodes = data;
+					});
 			}
 		]);
 	}
