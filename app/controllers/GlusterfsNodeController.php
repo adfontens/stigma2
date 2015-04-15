@@ -11,42 +11,42 @@ class GlusterfsNodeController extends \BaseController {
 	{
 		$result = array(
 			array("name" => "gv00", "nodes" => array(
-				array("name" => "node01", "procs" => "112", "total_cpu" => "0.44", "idle_cpu" => "99.56", "memory" => "10.47", "swap" => "0.00",
+				array("name" => "node1", "procs" => "112", "total_cpu" => "0.44", "idle_cpu" => "99.56", "memory" => "10.47", "swap" => "0.00",
 					"procs_status" => "0", "cpu_status" => "0", "memory_status" => "0", "swap_status" => "0"
 				),
-				array("name" => "node02", "procs" => "109", "total_cpu" => "0.32", "idle_cpu" => "99.68", "memory" => "12.30", "swap" => "0.00",
+				array("name" => "node2", "procs" => "109", "total_cpu" => "0.32", "idle_cpu" => "99.68", "memory" => "12.30", "swap" => "0.00",
 					"procs_status" => "0", "cpu_status" => "0", "memory_status" => "0", "swap_status" => "0"
 				),
-				array("name" => "node03", "procs" => "109", "total_cpu" => "1.05", "idle_cpu" => "98.95", "memory" => "12.43", "swap" => "0.00",
+				array("name" => "node3", "procs" => "109", "total_cpu" => "1.05", "idle_cpu" => "98.95", "memory" => "12.43", "swap" => "0.00",
 					"procs_status" => "0", "cpu_status" => "0", "memory_status" => "0", "swap_status" => "0"
 				),
-				array("name" => "node04", "procs" => "107", "total_cpu" => "0.83", "idle_cpu" => "99.17", "memory" => "12.50", "swap" => "0.00",
+				array("name" => "node4", "procs" => "107", "total_cpu" => "0.83", "idle_cpu" => "99.17", "memory" => "12.50", "swap" => "0.00",
 					"procs_status" => "0", "cpu_status" => "0", "memory_status" => "0", "swap_status" => "0"
 				),
 			)),
 			array("name" => "gv01", "nodes" => array(
-				array("name" => "node01", "procs" => "114", "total_cpu" => "0.73", "idle_cpu" => "99.27", "memory" => "10.47", "swap" => "0.00",
+				array("name" => "gfs1", "procs" => "114", "total_cpu" => "0.73", "idle_cpu" => "99.27", "memory" => "10.47", "swap" => "0.00",
 					"procs_status" => "0", "cpu_status" => "0", "memory_status" => "0", "swap_status" => "0"
 				),
-				array("name" => "node02", "procs" => "104", "total_cpu" => "0.52", "idle_cpu" => "99.48", "memory" => "12.65", "swap" => "0.00",
+				array("name" => "gfs2", "procs" => "104", "total_cpu" => "0.52", "idle_cpu" => "99.48", "memory" => "12.65", "swap" => "0.00",
 					"procs_status" => "0", "cpu_status" => "0", "memory_status" => "0", "swap_status" => "0"
 				),
-				array("name" => "node03", "procs" => "103", "total_cpu" => "0.45", "idle_cpu" => "99.55", "memory" => "12.51", "swap" => "0.00",
+				array("name" => "gfs3", "procs" => "103", "total_cpu" => "0.45", "idle_cpu" => "99.55", "memory" => "12.51", "swap" => "0.00",
 					"procs_status" => "0", "cpu_status" => "0", "memory_status" => "0", "swap_status" => "0"
 				),
-				array("name" => "node04", "procs" => "107", "total_cpu" => "21.03", "idle_cpu" => "78.97", "memory" => "12.77", "swap" => "0.00",
+				array("name" => "gfs4", "procs" => "107", "total_cpu" => "21.03", "idle_cpu" => "78.97", "memory" => "12.77", "swap" => "0.00",
 					"procs_status" => "0", "cpu_status" => "1", "memory_status" => "0", "swap_status" => "0"
 				),
-				array("name" => "node05", "procs" => "103", "total_cpu" => "0.48", "idle_cpu" => "99.52", "memory" => "11.43", "swap" => "0.00",
+				array("name" => "gfs5", "procs" => "103", "total_cpu" => "0.48", "idle_cpu" => "99.52", "memory" => "11.43", "swap" => "0.00",
 					"procs_status" => "0", "cpu_status" => "0", "memory_status" => "0", "swap_status" => "0"
 				),
-				array("name" => "node06", "procs" => "106", "total_cpu" => "0.31", "idle_cpu" => "99.69", "memory" => "13.30", "swap" => "0.00",
+				array("name" => "gfs6", "procs" => "106", "total_cpu" => "0.31", "idle_cpu" => "99.69", "memory" => "13.30", "swap" => "0.00",
 					"procs_status" => "0", "cpu_status" => "0", "memory_status" => "0", "swap_status" => "0"
 				),
-				array("name" => "node07", "procs" => "111", "total_cpu" => "1.25", "idle_cpu" => "98.75", "memory" => "11.84", "swap" => "0.00",
+				array("name" => "gfs7", "procs" => "111", "total_cpu" => "1.25", "idle_cpu" => "98.75", "memory" => "11.84", "swap" => "0.00",
 					"procs_status" => "0", "cpu_status" => "0", "memory_status" => "0", "swap_status" => "0"
 				),
-				array("name" => "node08", "procs" => "104", "total_cpu" => "0.43", "idle_cpu" => "99.57", "memory" => "13.35", "swap" => "0.00",
+				array("name" => "gfs8", "procs" => "104", "total_cpu" => "0.43", "idle_cpu" => "99.57", "memory" => "13.35", "swap" => "0.00",
 					"procs_status" => "0", "cpu_status" => "0", "memory_status" => "0", "swap_status" => "0"
 				),
 			))
