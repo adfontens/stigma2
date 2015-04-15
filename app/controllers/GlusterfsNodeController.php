@@ -34,8 +34,8 @@ class GlusterfsNodeController extends \BaseController {
 				array("name" => "gfs3", "procs" => "103", "total_cpu" => "0.45", "idle_cpu" => "99.55", "memory" => "12.51", "swap" => "0.00",
 					"procs_status" => "0", "cpu_status" => "0", "memory_status" => "0", "swap_status" => "0"
 				),
-				array("name" => "gfs4", "procs" => "107", "total_cpu" => "21.03", "idle_cpu" => "78.97", "memory" => "12.77", "swap" => "0.00",
-					"procs_status" => "0", "cpu_status" => "1", "memory_status" => "0", "swap_status" => "0"
+				array("name" => "gfs4", "procs" => "107", "total_cpu" => "1.03", "idle_cpu" => "98.97", "memory" => "12.77", "swap" => "0.00",
+					"procs_status" => "0", "cpu_status" => "0", "memory_status" => "0", "swap_status" => "0"
 				),
 				array("name" => "gfs5", "procs" => "103", "total_cpu" => "0.48", "idle_cpu" => "99.52", "memory" => "11.43", "swap" => "0.00",
 					"procs_status" => "0", "cpu_status" => "0", "memory_status" => "0", "swap_status" => "0"
