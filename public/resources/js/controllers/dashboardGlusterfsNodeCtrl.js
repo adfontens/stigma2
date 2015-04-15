@@ -7,7 +7,7 @@ define(['./module'],
 			function($scope, DashboardGlusterfsNodeFactory) {
 				DashboardGlusterfsNodeFactory.list()
 					.then(function(data) {
-						$scope.nodes = data;
+						$scope.glusterfsNodeData = data;
 					});
 			}
 		]);

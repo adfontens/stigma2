@@ -19,6 +19,7 @@ Route::get('/', function()
 // Route::group(array('before' => 'auth', 'prefix' => 'api'), function()
 Route::group(array('prefix' => 'api'), function()
 {
+	Route::resource('glusterfs/brick', 'GlusterfsBrickController');
 	Route::resource('glusterfs/node', 'GlusterfsNodeController');
 	Route::resource('overview', 'OverviewController');
 	Route::resource('hosts', 'HostsController');

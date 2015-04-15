@@ -62,6 +62,7 @@ return array(
     'File_ASN1' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/ASN1.php',
     'File_ASN1_Element' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/ASN1.php',
     'File_X509' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/X509.php',
+    'GlusterfsBrickController' => $baseDir . '/app/controllers/GlusterfsBrickController.php',
     'GlusterfsNodeController' => $baseDir . '/app/controllers/GlusterfsNodeController.php',
     'HomeController' => $baseDir . '/app/controllers/HomeController.php',
     'Host' => $baseDir . '/app/models/Host.php',
