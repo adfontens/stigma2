@@ -1,5 +1,9 @@
 define([
 	'./dashboardGlusterfsListCtrl',
+	'./dashboardGlusterfsWorkbenchCtrl',
+	'./dashboardGlusterfsNodeCtrl',
+	'./dashboardGlusterfsBrickCtrl',
+	'./dashboardGlusterfsNetworkCtrl',
 	'./dashboardOverviewListCtrl',
 	'./homeCtrl',
 	'./hostListCtrl',

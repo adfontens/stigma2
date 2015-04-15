@@ -5,12 +5,9 @@ define(['./module'],
 		controllers.controller('DashboardGlusterfsListCtrl', [
 			'$scope',
 			function($scope) {
-				$scope.tabs = [
-					{ title:'Storage', content:'.storage', select: 'angular.element("a").trigger("click");' },
-					// { title:'Node', content:'.node' },
-					// { title:'Brick', content:'.brick' },
-					{ title:'Network', content:'.network' }
-				];
+				$scope.trigger = function(name) {
+					angular.element('a[name="' + name + '"]').trigger('click');
+				};
 			}
 		]);
 	}
