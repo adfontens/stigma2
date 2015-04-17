@@ -15,7 +15,7 @@ define(['app', './app-config'],
 					});
 				}
 
-				$urlRouterProvider.otherwise(appConfig.getConfiguration().home);
+				$urlRouterProvider.otherwise(appConfig.getConfiguration().workbench);
 			}
 		]);
 	}

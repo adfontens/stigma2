@@ -3,11 +3,24 @@ define(['./module'],
 		'use strict';
 
 		controllers.controller('DashboardGlusterfsListCtrl', [
-			'$scope',
-			function($scope) {
-				$scope.trigger = function(name) {
-					angular.element('a[name="' + name + '"]').trigger('click');
+			'$scope', '$state',
+			function($scope, $state) {
+				$scope.tabs = [
+					{heading: 'Workbench', route: 'dashboardGlusterfsList.workbench', active: true},
+					{heading: 'Node', route: 'dashboardGlusterfsList.node', active: false},
+					{heading: 'Brick', route: 'dashboardGlusterfsList.brick', active: false},
+					{heading: 'Network', route: 'dashboardGlusterfsList.network', active: false},
+				];
+
+				$scope.active = function(route) {
+					return $state.is(route);
 				};
+
+				$scope.$on('$stateChangeSuccess', function() {
+					$scope.tabs.forEach(function(tab) {
+						tab.active = $scope.active(tab.route);
+					});
+				});
 			}
 		]);
 	}

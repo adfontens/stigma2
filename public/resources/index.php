@@ -15,7 +15,7 @@
 		<nav class="navbar navbar-inverse">
 			<div class="container" style="margin-left: 20px;">
 				<div class="navbar-header">
-					<a class="navbar-brand" ui-sref="home">Stigma2</a>
+					<a class="navbar-brand" ui-sref="dashboardGlusterfsList.workbench">Stigma2</a>
 				</div>
 
 				<!-- <ul class="nav navbar-nav navbar-right">
@@ -28,7 +28,7 @@
 		<div class="panel panel-primary">
 			<div class="panel-heading">Dashboard</div>
 			<!-- <div class="panel-body"><a ui-sref="dashboardOverviewList">Overview</a></div> -->
-			<div class="panel-body"><a ui-sref="dashboardGlusterfsList">GlusterFS</a></div>
+			<div class="panel-body"><a ui-sref="dashboardGlusterfsList.workbench">GlusterFS</a></div>
 		</div>
 		<p>
 		<div class="panel panel-default">

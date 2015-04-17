@@ -5,13 +5,12 @@ define([], function() {
 
 	var configuration = {
 		home: CONTEXT_ROOT,
+		workbench: CONTEXT_ROOT + '/workbench',
 		partial: PARTIALS_ROOT,
 		nagioscgi: NAGIOS_CGI_BIN,
 		route: [
-			// {'state': 'otherwise', 'url': CONTEXT_ROOT, 'templateUrl': PARTIALS_ROOT + 'home.php', 'controller': 'HomeCtrl'},
 			// {'state': 'home', 'url': CONTEXT_ROOT, 'templateUrl': PARTIALS_ROOT + 'home.php', 'controller': 'HomeCtrl'},
 			// {'state': 'dashboardOverviewList', 'url': CONTEXT_ROOT + '/overview', 'templateUrl': PARTIALS_ROOT + 'dashboard.overview.index.php', 'controller': 'DashboardOverviewListCtrl'},
-			{'state': 'otherwise', 'url': CONTEXT_ROOT, 'templateUrl': PARTIALS_ROOT + 'dashboard.glusterfs.index.php', 'controller': 'DashboardGlusterfsListCtrl'},
 			{'state': 'dashboardGlusterfsList', 'url': CONTEXT_ROOT, 'templateUrl': PARTIALS_ROOT + 'dashboard.glusterfs.index.php', 'controller': 'DashboardGlusterfsListCtrl'},
 			{'state': 'dashboardGlusterfsList.workbench', 'url': '/workbench', 'templateUrl': PARTIALS_ROOT + 'dashboard.glusterfs.workbench.php', 'controller': 'DashboardGlusterfsWorkbenchCtrl'},
 			{'state': 'dashboardGlusterfsList.node', 'url': '/node', 'templateUrl': PARTIALS_ROOT + 'dashboard.glusterfs.node.php', 'controller': 'DashboardGlusterfsNodeCtrl'},

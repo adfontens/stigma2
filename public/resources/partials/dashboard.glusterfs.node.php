@@ -4,7 +4,7 @@
 		<thead>
 			<tr>
 				<th style="width: 180px;">Volume</th>
-				<th style="width: 180px;">Host</th>
+				<th style="width: 180px;">Node</th>
 				<th>Status</th>
 			</tr>
 		</thead>
