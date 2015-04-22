@@ -1,0 +1,144 @@
+a {
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+}
+
+
+
+/* aside Area Start */
+.sidebar {
+    float: left;
+    width: 13%;
+    padding-left: 20px;
+}
+
+.panel-body {
+    padding: 7px;
+}
+/* aside Area End */
+
+
+
+/* main Area Start */
+.mainContents {
+    float: left;
+    width: 87%;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.listTdOverflow {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.tableTitleName {
+    width: 30%;
+}
+
+.tableTitleValue {
+    width: 70%;
+}
+
+.timeperiodRow {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+/* main Area End */
+
+
+
+/* footer Area Start */
+.footerbar {
+    clear: both;
+    padding-top: 50px;
+}
+/* footer Area End */
+
+
+
+/* ng-drag and ng-drop Start */
+*{
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+[ng-drag]{
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+[ng-drag]{
+    width: 200px;
+    height: 50px;
+    background: rgba(255,0,0, 0.5);
+    color:white;
+    text-align: center;
+    padding-top:15px;
+    display: inline-block;
+    margin:0 10px;
+    cursor: move;
+}
+ul.draggable-objects:after{
+    display: block;
+    content:"";
+    clear:both;
+}
+.draggable-objects li{
+    float:left;
+    display: block;
+    width: 120px;
+    height:100px;
+}
+[ng-drag].drag-over{
+    border:solid 1px red;
+}
+[ng-drag].dragging{
+    opacity: 0.5;
+}
+[ng-drop]{
+    background: rgba(0,255,0, 0.5);
+    text-align: center;
+    width: 45%;
+    height: 600px;
+    padding-top:50px;
+    padding-bottom:30px;
+    display: block;
+    margin:20px;
+    position: relative;
+    overflow-y: scroll;
+    float: left;
+}
+[ng-drop].drag-enter{
+    border:solid 5px red;
+}
+div.ng-drop-title{
+    width: 50%;
+    float: left;
+}
+span.ng-drop-title{
+    display: block;
+    font-size: x-large;
+    font-weight: bold;
+    margin-left: 45%;
+    color: #289FD6
+}
+span.ng-drop-title-right{
+    display: block;
+    font-size: x-large;
+    font-weight: bold;
+    margin-left: 38%;
+    color: #FF8800
+}
+[ng-drop] div{
+    position: relative;
+    z-index: 2;
+}
+/* ng-drag and ng-drop End */

@@ -1,0 +1,1 @@
+<iframe src="http://106.243.87.166:6060/stigma2/resources/lib/grafana/index.html#dashboard/db/glusterfs-network" id="glusterfsNetwork" frameborder="0" width="100%" height="1045px">이 브라우저는 iframe을 지원하지 않습니다.</iframe>
