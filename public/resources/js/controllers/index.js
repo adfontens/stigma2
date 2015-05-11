@@ -5,12 +5,13 @@ define([
 	'./dashboardGlusterfsBrickCtrl',
 	'./dashboardGlusterfsNetworkCtrl',
 	'./statusClusterListCtrl',
+	'./statusClusterShowCtrl',
 	'./statusNodeListCtrl',
+	'./statusNodeShowCtrl',
 	'./statusVolumeListCtrl',
+	'./statusVolumeShowCtrl',
 	'./statusBrickListCtrl',
-
-	'./hostShowCtrl',
-
+	'./statusBrickShowCtrl',
 	'./historyGraphCtrl',
 	'./historyLogCtrl',
 	'./historyReportCtrl',

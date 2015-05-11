@@ -19,12 +19,14 @@ define([], function() {
 			{'state': 'statusVolumeList', 'url': CONTEXT_ROOT + '/status/volumes', 'templateUrl': PARTIALS_ROOT + 'status.volume.index.php', 'controller': 'StatusVolumeListCtrl'},
 			{'state': 'statusBrickList', 'url': CONTEXT_ROOT + '/status/bricks', 'templateUrl': PARTIALS_ROOT + 'status.brick.index.php', 'controller': 'StatusBrickListCtrl'},
 
-			{'state': 'clusterDetail', 'url': CONTEXT_ROOT + '/hosts/:uuid', 'templateUrl': PARTIALS_ROOT + 'host.show.php', 'controller': 'HostShowCtrl'},
+			{'state': 'statusClusterDetail', 'url': CONTEXT_ROOT + '/status/clusters/:id', 'templateUrl': PARTIALS_ROOT + 'status.cluster.show.php', 'controller': 'StatusClusterShowCtrl'},
+			{'state': 'statusNodeDetail', 'url': CONTEXT_ROOT + '/status/nodes/:id', 'templateUrl': PARTIALS_ROOT + 'status.node.show.php', 'controller': 'StatusNodeShowCtrl'},
+			{'state': 'statusVolumeDetail', 'url': CONTEXT_ROOT + '/status/volumes/:id', 'templateUrl': PARTIALS_ROOT + 'status.volume.show.php', 'controller': 'StatusVolumeShowCtrl'},
+			{'state': 'statusBrickDetail', 'url': CONTEXT_ROOT + '/status/bricks/:id', 'templateUrl': PARTIALS_ROOT + 'status.brick.show.php', 'controller': 'StatusBrickShowCtrl'},
 
 			{'state': 'historyGraph', 'url': CONTEXT_ROOT + '/history/graph', 'templateUrl': PARTIALS_ROOT + 'history.graph.php', 'controller': 'HistoryGraphCtrl'},
 			{'state': 'historyLog', 'url': CONTEXT_ROOT + '/history/log', 'templateUrl': PARTIALS_ROOT + 'history.log.php', 'controller': 'HistoryLogCtrl'},
 			{'state': 'historyReport', 'url': CONTEXT_ROOT + '/history/report', 'templateUrl': PARTIALS_ROOT + 'history.report.php', 'controller': 'HistoryReportCtrl'},
-
 			{'state': 'systemConfigurationList', 'url': CONTEXT_ROOT + '/configuration', 'templateUrl': PARTIALS_ROOT + 'system.configuration.index.php', 'controller': 'SystemConfigurationListCtrl'},
 			{'state': 'systemConfigurationCommandList', 'url': CONTEXT_ROOT + '/configuration/commands', 'templateUrl': PARTIALS_ROOT + 'system.configuration.command.index.php', 'controller': 'SystemConfigurationCommandListCtrl'},
 			{'state': 'systemConfigurationCommandCreation', 'url': CONTEXT_ROOT + '/configuration/commands/create', 'templateUrl': PARTIALS_ROOT + 'system.configuration.command.create.php', 'controller': 'SystemConfigurationCommandCreationCtrl'},
