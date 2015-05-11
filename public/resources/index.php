@@ -15,7 +15,7 @@
 		<nav class="navbar navbar-inverse">
 			<div class="container" style="margin-left: 20px;">
 				<div class="navbar-header">
-					<a class="navbar-brand" ui-sref="dashboardGlusterfsList.workbench">Stigma2</a>
+					<a class="navbar-brand" ui-sref="dashboardGlusterfs.workbench">Stigma2</a>
 				</div>
 
 				<!-- <ul class="nav navbar-nav navbar-right">
@@ -27,33 +27,22 @@
 	<aside class="sidebar">
 		<div class="panel panel-primary">
 			<div class="panel-heading">Dashboard</div>
-			<!-- <div class="panel-body"><a ui-sref="dashboardOverviewList">Overview</a></div> -->
-			<div class="panel-body"><a ui-sref="dashboardGlusterfsList.workbench">GlusterFS</a></div>
+			<div class="panel-body"><a ui-sref="dashboardGlusterfs.workbench">GlusterFS</a></div>
 		</div>
 		<p>
 		<div class="panel panel-default">
-			<div class="panel-heading">Host</div>
-			<div class="panel-body"><a ui-sref="hostList({current_state:'', has_been_checked:''})">All</a></div>
-			<div class="panel-body"><a ui-sref="hostList({current_state:'0', has_been_checked:'1'})">Up</a></div>
-			<div class="panel-body"><a ui-sref="hostList({current_state:'1', has_been_checked:'1'})">Down</a></div>
-			<div class="panel-body"><a ui-sref="hostList({current_state:'2', has_been_checked:'1'})">Unreachable</a></div>
-			<div class="panel-body"><a ui-sref="hostList({current_state:'0', has_been_checked:'0'})">Pending</a></div>
-		</div>
-		<p>
-		<div class="panel panel-default">
-			<div class="panel-heading">Service</div>
-			<div class="panel-body"><a ui-sref="serviceList({current_state:'', has_been_checked:''})">All</a></div>
-			<div class="panel-body"><a ui-sref="serviceList({current_state:'0', has_been_checked:'1'})">OK</a></div>
-			<div class="panel-body"><a ui-sref="serviceList({current_state:'1', has_been_checked:'1'})">Warning</a></div>
-			<div class="panel-body"><a ui-sref="serviceList({current_state:'2', has_been_checked:'1'})">Critical</a></div>
-			<div class="panel-body"><a ui-sref="serviceList({current_state:'3', has_been_checked:'1'})">Unknown</a></div>
-			<div class="panel-body"><a ui-sref="serviceList({current_state:'0', has_been_checked:'0'})">Pending</a></div>
+			<div class="panel-heading">Current Status</div>
+			<div class="panel-body"><a ui-sref="statusClusterList">Clusters</a></div>
+			<div class="panel-body"><a ui-sref="statusNodeList">Nodes</a></div>
+			<div class="panel-body"><a ui-sref="statusVolumeList">Volumes</a></div>
+			<div class="panel-body"><a ui-sref="statusBrickList">Bricks</a></div>
 		</div>
 		<p>
 		<div class="panel panel-warning">
-			<div class="panel-heading">Report</div>
-			<div class="panel-body"><a ui-sref="reportGraph"><i class="fa fa-line-chart"></i> Graph</a></div>
-			<div class="panel-body"><a ui-sref="reportLogList">Log</a></div>
+			<div class="panel-heading">History</div>
+			<div class="panel-body"><a ui-sref="historyGraph"><i class="fa fa-line-chart"></i> Graph</a></div>
+			<div class="panel-body"><a ui-sref="historyLog">Log</a></div>
+			<div class="panel-body"><a ui-sref="historyReport">Report</a></div>
 		</div>
 		<p>
 		<div class="panel panel-danger">

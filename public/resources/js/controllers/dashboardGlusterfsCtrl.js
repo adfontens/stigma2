@@ -2,14 +2,14 @@ define(['./module'],
 	function(controllers) {
 		'use strict';
 
-		controllers.controller('DashboardGlusterfsListCtrl', [
+		controllers.controller('DashboardGlusterfsCtrl', [
 			'$scope', '$state',
 			function($scope, $state) {
 				$scope.tabs = [
-					{heading: 'Workbench', route: 'dashboardGlusterfsList.workbench', active: true},
-					{heading: 'Node', route: 'dashboardGlusterfsList.node', active: false},
-					{heading: 'Brick', route: 'dashboardGlusterfsList.brick', active: false},
-					{heading: 'Network', route: 'dashboardGlusterfsList.network', active: false},
+					{heading: 'Workbench', route: 'dashboardGlusterfs.workbench', active: true},
+					{heading: 'Node', route: 'dashboardGlusterfs.node', active: false},
+					{heading: 'Brick', route: 'dashboardGlusterfs.brick', active: false},
+					{heading: 'Network', route: 'dashboardGlusterfs.network', active: false},
 				];
 
 				$scope.active = function(route) {
