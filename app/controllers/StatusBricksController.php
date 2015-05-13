@@ -1,6 +1,6 @@
 <?php
 
-class StatusNodesController extends \BaseController {
+class StatusBricksController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -9,9 +9,9 @@ class StatusNodesController extends \BaseController {
 	 */
 	public function index()
 	{
-		$nodes = $this->getList();
+		$bricks = $this->getList();
 
-		return Response::json($nodes);
+		return Response::json($bricks);
 	}
 
 
@@ -87,14 +87,18 @@ class StatusNodesController extends \BaseController {
 
 	private function getList() {
 		$result = array(
-			array("name" => "node00", "ip" => "127.0.0.1", "status" => "OK", 
-				"cpu" => "1%", "memory" => "20%", "network" => "4%"),
-			array("name" => "node01", "ip" => "127.0.0.1", "status" => "OK", 
-				"cpu" => "1%", "memory" => "20%", "network" => "4%"),
-			array("name" => "node02", "ip" => "127.0.0.1", "status" => "OK", 
-				"cpu" => "1%", "memory" => "20%", "network" => "4%"),
-			array("name" => "node03", "ip" => "127.0.0.1", "status" => "OK", 
-				"cpu" => "1%", "memory" => "20%", "network" => "4%"),
+			array("status" => "UP", "server" => "127.0.0.1", "brick_directory" => "/export/1", 
+				"space_used" => "20%", "activities" => ""),
+			array("status" => "UP", "server" => "127.0.0.1", "brick_directory" => "/export/2", 
+				"space_used" => "20%", "activities" => ""),
+			array("status" => "UP", "server" => "127.0.0.1", "brick_directory" => "/export/3", 
+				"space_used" => "20%", "activities" => ""),
+			array("status" => "UP", "server" => "127.0.0.1", "brick_directory" => "/export/4", 
+				"space_used" => "20%", "activities" => ""),
+			array("status" => "UP", "server" => "127.0.0.1", "brick_directory" => "/export/5", 
+				"space_used" => "20%", "activities" => ""),
+			array("status" => "UP", "server" => "127.0.0.1", "brick_directory" => "/export/6", 
+				"space_used" => "20%", "activities" => ""),
 		);
 
 		return $result;

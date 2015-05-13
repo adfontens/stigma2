@@ -3,9 +3,12 @@ define(['./module'],
 		'use strict';
 
 		controllers.controller('StatusVolumeListCtrl', [
-			'$scope', '$state', 'HostFactory',
-			function($scope, $state, HostFactory) {
-				//
+			'$scope', '$state', 'StatusVolumeFactory',
+			function($scope, $state, StatusVolumeFactory) {
+				StatusVolumeFactory.list()
+					.then(function(data) {
+						$scope.volumes = data;
+					});
 			}
 		]);
 	}

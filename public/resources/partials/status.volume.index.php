@@ -17,12 +17,12 @@
 			</thead>
 			<tbody>
 				<tr ng-repeat="volume in volumes" ng-show="volumes.length">
-					<td class="listTdOverflow" style="vertical-align: middle;">{{ volume.volume_name }}</td>
-					<td class="listTdOverflow" style="vertical-align: middle;">{{ volume.volume_name }}</td>
-					<td class="listTdOverflow" style="vertical-align: middle;">{{ volume.volume_name }}</td>
-					<td class="listTdOverflow" style="vertical-align: middle;">{{ volume.volume_name }}</td>
-					<td class="listTdOverflow" style="vertical-align: middle;">{{ volume.volume_name }}</td>
-					<td class="listTdOverflow" style="vertical-align: middle;">{{ volume.volume_name }}</td>
+					<td style="vertical-align: middle;">{{ volume.name }}</td>
+					<td style="vertical-align: middle;">{{ volume.cluster }}</td>
+					<td style="vertical-align: middle;">{{ volume.volume_type }}</td>
+					<td style="vertical-align: middle;">{{ volume.bricks }}</td>
+					<td style="vertical-align: middle;">{{ volume.space_used }}</td>
+					<td style="vertical-align: middle;">{{ volume.activities }}</td>
 				</tr>
 				<tr ng-show="!volumes.length">
 					<td colspan="6"><strong>No volumes.</strong></td>

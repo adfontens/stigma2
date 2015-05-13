@@ -8,6 +8,8 @@ define([
 	'./directiveTimeperiodFactory',
 	'./statusClusterFactory',
 	'./statusNodeFactory',
+	'./statusVolumeFactory',
+	'./statusBrickFactory',
 	'./systemConfigurationCommandFactory',
 	'./systemConfigurationHostFactory',
 	'./systemConfigurationHostgroupFactory',

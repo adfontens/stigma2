@@ -16,11 +16,11 @@
 			</thead>
 			<tbody>
 				<tr ng-repeat="brick in bricks" ng-show="bricks.length">
-					<td class="listTdOverflow" style="vertical-align: middle;">{{ brick.brick_name }}</td>
-					<td class="listTdOverflow" style="vertical-align: middle;">{{ brick.brick_name }}</td>
-					<td class="listTdOverflow" style="vertical-align: middle;">{{ brick.brick_name }}</td>
-					<td class="listTdOverflow" style="vertical-align: middle;">{{ brick.brick_name }}</td>
-					<td class="listTdOverflow" style="vertical-align: middle;">{{ brick.brick_name }}</td>
+					<td style="vertical-align: middle;">{{ brick.status }}</td>
+					<td style="vertical-align: middle;">{{ brick.server }}</td>
+					<td style="vertical-align: middle;">{{ brick.brick_directory }}</td>
+					<td style="vertical-align: middle;">{{ brick.space_used }}</td>
+					<td style="vertical-align: middle;">{{ brick.activities }}</td>
 				</tr>
 				<tr ng-show="!bricks.length">
 					<td colspan="5"><strong>No bricks.</strong></td>
