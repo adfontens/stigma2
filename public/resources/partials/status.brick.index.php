@@ -16,7 +16,7 @@
 			</thead>
 			<tbody>
 				<tr ng-repeat="brick in bricks" ng-show="bricks.length">
-					<td style="vertical-align: middle;">{{ brick.status }}</td>
+					<td style="vertical-align: middle;"><a ng-click="detailBrick(brick.id)">{{ brick.status }}</a></td>
 					<td style="vertical-align: middle;">{{ brick.server }}</td>
 					<td style="vertical-align: middle;">{{ brick.brick_directory }}</td>
 					<td style="vertical-align: middle;">{{ brick.space_used }}</td>
