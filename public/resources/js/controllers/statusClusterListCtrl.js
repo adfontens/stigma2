@@ -3,9 +3,12 @@ define(['./module'],
 		'use strict';
 
 		controllers.controller('StatusClusterListCtrl', [
-			'$scope', '$state', 'HostFactory',
-			function($scope, $state, HostFactory) {
-				//
+			'$scope', '$state', 'StatusClusterFactory',
+			function($scope, $state, StatusClusterFactory) {
+				StatusClusterFactory.list()
+					.then(function(data) {
+						$scope.clusters = data;
+					});
 			}
 		]);
 	}

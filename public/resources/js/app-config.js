@@ -16,14 +16,10 @@ define([], function() {
 			{'state': 'dashboardGlusterfs.network', 'url': '/network', 'templateUrl': PARTIALS_ROOT + 'dashboard.glusterfs.network.php', 'controller': 'DashboardGlusterfsNetworkCtrl'},
 			{'state': 'statusClusterList', 'url': CONTEXT_ROOT + '/status/clusters', 'templateUrl': PARTIALS_ROOT + 'status.cluster.index.php', 'controller': 'StatusClusterListCtrl'},
 			{'state': 'statusNodeList', 'url': CONTEXT_ROOT + '/status/nodes', 'templateUrl': PARTIALS_ROOT + 'status.node.index.php', 'controller': 'StatusNodeListCtrl'},
+			{'state': 'statusNodeDetail', 'url': CONTEXT_ROOT + '/status/nodes/:id', 'templateUrl': PARTIALS_ROOT + 'status.node.show.php', 'controller': 'StatusNodeShowCtrl'},
 			{'state': 'statusVolumeList', 'url': CONTEXT_ROOT + '/status/volumes', 'templateUrl': PARTIALS_ROOT + 'status.volume.index.php', 'controller': 'StatusVolumeListCtrl'},
 			{'state': 'statusBrickList', 'url': CONTEXT_ROOT + '/status/bricks', 'templateUrl': PARTIALS_ROOT + 'status.brick.index.php', 'controller': 'StatusBrickListCtrl'},
-
-			{'state': 'statusClusterDetail', 'url': CONTEXT_ROOT + '/status/clusters/:id', 'templateUrl': PARTIALS_ROOT + 'status.cluster.show.php', 'controller': 'StatusClusterShowCtrl'},
-			{'state': 'statusNodeDetail', 'url': CONTEXT_ROOT + '/status/nodes/:id', 'templateUrl': PARTIALS_ROOT + 'status.node.show.php', 'controller': 'StatusNodeShowCtrl'},
-			{'state': 'statusVolumeDetail', 'url': CONTEXT_ROOT + '/status/volumes/:id', 'templateUrl': PARTIALS_ROOT + 'status.volume.show.php', 'controller': 'StatusVolumeShowCtrl'},
 			{'state': 'statusBrickDetail', 'url': CONTEXT_ROOT + '/status/bricks/:id', 'templateUrl': PARTIALS_ROOT + 'status.brick.show.php', 'controller': 'StatusBrickShowCtrl'},
-
 			{'state': 'historyGraph', 'url': CONTEXT_ROOT + '/history/graph', 'templateUrl': PARTIALS_ROOT + 'history.graph.php', 'controller': 'HistoryGraphCtrl'},
 			{'state': 'historyLog', 'url': CONTEXT_ROOT + '/history/log', 'templateUrl': PARTIALS_ROOT + 'history.log.php', 'controller': 'HistoryLogCtrl'},
 			{'state': 'historyReport', 'url': CONTEXT_ROOT + '/history/report', 'templateUrl': PARTIALS_ROOT + 'history.report.php', 'controller': 'HistoryReportCtrl'},
