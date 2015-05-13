@@ -7,6 +7,7 @@ define([
 	'./dashboardOverviewFactory',
 	'./directiveTimeperiodFactory',
 	'./statusClusterFactory',
+	'./statusNodeFactory',
 	'./systemConfigurationCommandFactory',
 	'./systemConfigurationHostFactory',
 	'./systemConfigurationHostgroupFactory',

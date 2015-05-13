@@ -17,12 +17,12 @@
 			</thead>
 			<tbody>
 				<tr ng-repeat="node in nodes" ng-show="nodes.length">
-					<td class="listTdOverflow" style="vertical-align: middle;">{{ node.node_name }}</td>
-					<td class="listTdOverflow" style="vertical-align: middle;">{{ node.node_name }}</td>
-					<td class="listTdOverflow" style="vertical-align: middle;">{{ node.node_name }}</td>
-					<td class="listTdOverflow" style="vertical-align: middle;">{{ node.node_name }}</td>
-					<td class="listTdOverflow" style="vertical-align: middle;">{{ node.node_name }}</td>
-					<td class="listTdOverflow" style="vertical-align: middle;">{{ node.node_name }}</td>
+					<td style="vertical-align: middle;">{{ node.name }}</td>
+					<td style="vertical-align: middle;">{{ node.ip }}</td>
+					<td style="vertical-align: middle;">{{ node.status }}</td>
+					<td style="vertical-align: middle;">{{ node.cpu }}</td>
+					<td style="vertical-align: middle;">{{ node.memory }}</td>
+					<td style="vertical-align: middle;">{{ node.network }}</td>
 				</tr>
 				<tr ng-show="!nodes.length">
 					<td colspan="6"><strong>No nodes.</strong></td>

@@ -23,6 +23,7 @@ Route::group(array('prefix' => 'api'), function()
 	Route::resource('glusterfs/node', 'GlusterfsNodeController');
 	Route::resource('glusterfs/workbench', 'GlusterfsWorkbenchController');
 	Route::resource('status/clusters', 'StatusClustersController');
+	Route::resource('status/nodes', 'StatusNodesController');
 	Route::resource('configuration/commands', 'ConfigurationCommandsController');
 	Route::resource('configuration/hostgroups', 'ConfigurationHostgroupsController');
 	Route::resource('configuration/hosts', 'ConfigurationHostsController');
