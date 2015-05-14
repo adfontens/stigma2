@@ -89,17 +89,17 @@ class StatusVolumesController extends \BaseController {
 	private function getList() {
 		$result = array(
 			array("name" => "gv00", "cluster" => "cluster00", "volume_type" => "EXT 4", 
-				"bricks" => "2 ok", "space_used" => "20%", "activities" => ""),
+				"bricks" => "2 ok", "space_used" => "20", "activities" => ""),
 			array("name" => "gv01", "cluster" => "cluster00", "volume_type" => "EXT 4", 
-				"bricks" => "2 ok", "space_used" => "20%", "activities" => ""),
+				"bricks" => "2 ok", "space_used" => "20", "activities" => ""),
 			array("name" => "gv02", "cluster" => "cluster00", "volume_type" => "EXT 4", 
-				"bricks" => "2 ok", "space_used" => "20%", "activities" => ""),
+				"bricks" => "2 ok", "space_used" => "20", "activities" => ""),
 			array("name" => "gv03", "cluster" => "cluster00", "volume_type" => "EXT 4", 
-				"bricks" => "2 ok", "space_used" => "20%", "activities" => ""),
+				"bricks" => "2 ok", "space_used" => "20", "activities" => ""),
 			array("name" => "gv04", "cluster" => "cluster00", "volume_type" => "EXT 4", 
-				"bricks" => "2 ok", "space_used" => "20%", "activities" => ""),
+				"bricks" => "2 ok", "space_used" => "20", "activities" => ""),
 			array("name" => "gv05", "cluster" => "cluster00", "volume_type" => "EXT 4", 
-				"bricks" => "2 ok", "space_used" => "20%", "activities" => ""),
+				"bricks" => "2 ok", "space_used" => "20", "activities" => ""),
 		);
 
 		return $result;
