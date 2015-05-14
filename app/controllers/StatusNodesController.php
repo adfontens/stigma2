@@ -106,13 +106,13 @@ class StatusNodesController extends \BaseController {
 	private function getList() {
 		$result = array(
 			array("name" => "node00", "ip" => "127.0.0.1", "status" => "OK", 
-				"cpu" => "1%", "memory" => "20%", "network" => "4%"),
+				"cpu" => "1", "memory" => "20", "network" => "4"),
 			array("name" => "node01", "ip" => "127.0.0.1", "status" => "OK", 
-				"cpu" => "1%", "memory" => "20%", "network" => "4%"),
+				"cpu" => "1", "memory" => "20", "network" => "4"),
 			array("name" => "node02", "ip" => "127.0.0.1", "status" => "OK", 
-				"cpu" => "1%", "memory" => "20%", "network" => "4%"),
+				"cpu" => "1", "memory" => "20", "network" => "4"),
 			array("name" => "node03", "ip" => "127.0.0.1", "status" => "OK", 
-				"cpu" => "1%", "memory" => "20%", "network" => "4%"),
+				"cpu" => "1", "memory" => "20", "network" => "4"),
 		);
 
 		return $result;
