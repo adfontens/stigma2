@@ -45,7 +45,25 @@ class StatusNodesController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$node = array(
+			array("key" => "OS Version", "value" => "16 - 1"),
+			array("key" => "Kernel Version", "value" => "3.3.0 - 4.fc16x86_64"),
+			array("key" => "KVM Version", "value" => "0.15.1 - 4.fc16"),
+			array("key" => "VDSM Version", "value" => "3.0.0.0"),
+			array("key" => "SPICE Version", "value" => "0.10.1 - 1.fc16"),
+			array("key" => "iSCSI Initiator Name", "value" => "iqn.1994-05.com.redhat.ea3"),
+			array("key" => "Active VMs", "value" => "\0"),
+			array("key" => "Memory Page Sharing", "value" => "Inactive"),
+			array("key" => "Automatic Large Pages", "value" => "Always"),
+			array("key" => "Number of CPUs", "value" => "2"),
+			array("key" => "CPU Name", "value" => "Intel Conroe Family"),
+			array("key" => "CPU Type", "value" => "Intel(R) Core(TM)2"),
+			array("key" => "Physical Memory", "value" => "2378 MB total, 230 MB used, 2132 MB free"),
+			array("key" => "Swap Size", "value" => "0 MB total, 0 MB used, 0 MB free"),
+			array("key" => "Shared Memory", "value" => "0%"),
+		);
+
+		return $node;
 	}
 
 

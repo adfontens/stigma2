@@ -7,6 +7,10 @@ define(['./implement', './module', '../app-config'],
 				list: function() {
 					var url = appConfig.getConfiguration().home + '/api/status/nodes';
 					return implement.httpGetServiceImpl($http, url);
+				},
+				show: function(id) {
+					var url = appConfig.getConfiguration().home + '/api/status/nodes/' + id;
+					return implement.httpGetServiceImpl($http, url);
 				}
 			}
 		});

@@ -17,7 +17,7 @@
 			</thead>
 			<tbody>
 				<tr ng-repeat="node in nodes" ng-show="nodes.length">
-					<td style="vertical-align: middle;">{{ node.name }}</td>
+					<td style="vertical-align: middle;"><a ng-click="detailNode(node.id)">{{ node.name }}</a></td>
 					<td style="vertical-align: middle;">{{ node.ip }}</td>
 					<td style="vertical-align: middle;">{{ node.status }}</td>
 					<td style="vertical-align: middle;">{{ node.cpu }}</td>

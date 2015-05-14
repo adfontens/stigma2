@@ -3,9 +3,12 @@ define(['./module'],
 		'use strict';
 
 		controllers.controller('StatusNodeShowCtrl', [
-			'$scope', '$state', 'HostFactory',
-			function($scope, $state, HostFactory) {
-				//
+			'$scope', '$state', 'StatusNodeFactory',
+			function($scope, $state, StatusNodeFactory) {
+				StatusNodeFactory.show($state.params.id)
+					.then(function(data) {
+						$scope.node = data;
+					});
 			}
 		]);
 	}
