@@ -96,6 +96,12 @@ textarea {
 .disabled {
     disabled: disabled;
 }
+
+.progress {
+    margin-bottom: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+}
 /* main Area End */
 
 

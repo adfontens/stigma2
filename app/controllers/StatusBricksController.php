@@ -118,17 +118,17 @@ class StatusBricksController extends \BaseController {
 	private function getList() {
 		$result = array(
 			array("status" => "UP", "server" => "127.0.0.1", "brick_directory" => "/export/1", 
-				"space_used" => "20%", "activities" => ""),
+				"space_used" => "20", "activities" => ""),
 			array("status" => "UP", "server" => "127.0.0.1", "brick_directory" => "/export/2", 
-				"space_used" => "20%", "activities" => ""),
+				"space_used" => "29", "activities" => ""),
 			array("status" => "UP", "server" => "127.0.0.1", "brick_directory" => "/export/3", 
-				"space_used" => "20%", "activities" => ""),
+				"space_used" => "30", "activities" => ""),
 			array("status" => "UP", "server" => "127.0.0.1", "brick_directory" => "/export/4", 
-				"space_used" => "20%", "activities" => ""),
+				"space_used" => "31", "activities" => ""),
 			array("status" => "UP", "server" => "127.0.0.1", "brick_directory" => "/export/5", 
-				"space_used" => "20%", "activities" => ""),
+				"space_used" => "70", "activities" => ""),
 			array("status" => "UP", "server" => "127.0.0.1", "brick_directory" => "/export/6", 
-				"space_used" => "20%", "activities" => ""),
+				"space_used" => "71", "activities" => ""),
 		);
 
 		return $result;

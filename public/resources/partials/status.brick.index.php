@@ -19,7 +19,23 @@
 					<td style="vertical-align: middle;"><a ng-click="detailBrick(brick.id)">{{ brick.status }}</a></td>
 					<td style="vertical-align: middle;">{{ brick.server }}</td>
 					<td style="vertical-align: middle;">{{ brick.brick_directory }}</td>
-					<td style="vertical-align: middle;">{{ brick.space_used }}</td>
+					<td style="vertical-align: middle;">
+						<div class="progress" ng-if="brick.space_used < 31">
+							<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="brick.space_used" aria-valuemin="0" aria-valuemax="100" style="width:{{brick.space_used}}%">
+								{{ brick.space_used }} %
+							</div>
+						</div>
+						<div class="progress" ng-if="brick.space_used > 30 && brick.space_used < 71">
+							<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="brick.space_used" aria-valuemin="0" aria-valuemax="100" style="width:{{brick.space_used}}%">
+								{{ brick.space_used }} %
+							</div>
+						</div>
+						<div class="progress" ng-if="brick.space_used > 70">
+							<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="brick.space_used" aria-valuemin="0" aria-valuemax="100" style="width:{{brick.space_used}}%">
+								{{ brick.space_used }} %
+							</div>
+						</div>
+					</td>
 					<td style="vertical-align: middle;">{{ brick.activities }}</td>
 				</tr>
 				<tr ng-show="!bricks.length">
