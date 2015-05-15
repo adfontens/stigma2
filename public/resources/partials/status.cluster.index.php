@@ -17,16 +17,24 @@
 				<thead>
 					<tr>
 						<th>Node</th>
-						<th>Status</th>
-						<th>Bricks</th>
-						<th style="width: 75px;">Actions</th>
+						<th style="width: 200px;">Status</th>
+						<th style="width: 200px;">Bricks</th>
+						<th style="width: 300px;">Actions</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr ng-repeat="node in nodes = (cluster.nodes)" ng-show="nodes.length">
 						<td class="listTdOverflow" style="vertical-align: middle;">{{ node.name }}</td>
-						<td><a ng-click="" class="btn btn-small btn-primary">edit</a></td>
-						<td><a ng-click="" class="btn btn-small btn-danger">delete</a></td>
+						<td>
+							<span ng-if="node.status === 'OK'" class="btn btn-small btn-success" style="width: 200px;">OK</span>
+							<span ng-if="node.status === 'WARNING'" class="btn btn-small btn-warning" style="width: 200px;">WARNING</span>
+							<span ng-if="node.status === 'CRITICAL'" class="btn btn-small btn-danger" style="width: 200px;">CRITICAL</span>
+						</td>
+						<td>
+							<span class="btn btn-small btn-success" style="width: 200px;">{{ node.bricks | sumOfBricksStatus:'0' }} OK</span>
+							<span class="btn btn-small btn-warning" style="width: 200px;">{{ node.bricks | sumOfBricksStatus:'1' }} WARNING</span>
+							<span class="btn btn-small btn-danger" style="width: 200px;">{{ node.bricks | sumOfBricksStatus:'2' }} CRITICAL</span>
+						</td>
 						<td><a ng-click="" class="btn btn-small btn-danger">delete</a></td>
 					</tr>
 					<tr ng-show="!nodes.length">

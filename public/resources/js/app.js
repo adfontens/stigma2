@@ -1,11 +1,11 @@
-define(['angular', './controllers/index', './directives/index', './services/index', 'ngDraggable', 'ui.bootstrap', 'ui.bootstrap.tpls', 'ui.router'], //'./filters/index', 
+define(['angular', './controllers/index', './directives/index', './filters/index', './services/index', 'ngDraggable', 'ui.bootstrap', 'ui.bootstrap.tpls', 'ui.router'],
 	function(angular) {
 		'use strict';
 
 		return angular.module('app', [
 			'app.controllers',
 			'app.directives',
-			// 'app.filters',
+			'app.filters',
 			'app.services',
 			'ngDraggable',
 			'ui.bootstrap',

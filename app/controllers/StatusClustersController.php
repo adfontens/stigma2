@@ -92,73 +92,73 @@ class StatusClustersController extends \BaseController {
 			array("name" => "cluster00", "description" => "cluster00", "nodes" => array(
 				array("name" => "node1", "status" => "OK", "bricks" => array(
 					array("name" => "1", "status" => "0"),
-					array("name" => "2", "status" => "9"),
+					array("name" => "2", "status" => "1"),
 				)),
-				array("name" => "node2", "status" => "OK", "bricks" => array(
+				array("name" => "node2", "status" => "WARNING", "bricks" => array(
 					array("name" => "1", "status" => "0"),
-					array("name" => "2", "status" => "9"),
+					array("name" => "2", "status" => "1"),
 				)),
-				array("name" => "node3", "status" => "OK", "bricks" => array(
+				array("name" => "node3", "status" => "CRITICAL", "bricks" => array(
 					array("name" => "1", "status" => "0"),
-					array("name" => "2", "status" => "9"),
+					array("name" => "2", "status" => "1"),
 				)),
 				array("name" => "node4", "status" => "OK", "bricks" => array(
 					array("name" => "1", "status" => "0"),
-					array("name" => "2", "status" => "9"),
+					array("name" => "2", "status" => "1"),
 				)),
 			)),
 			array("name" => "cluster01", "description" => "cluster01", "nodes" => array(
 				array("name" => "node1", "status" => "OK", "bricks" => array(
 					array("name" => "1", "status" => "0"),
-					array("name" => "2", "status" => "9"),
+					array("name" => "2", "status" => "1"),
 				)),
 				array("name" => "node2", "status" => "OK", "bricks" => array(
 					array("name" => "1", "status" => "0"),
-					array("name" => "2", "status" => "9"),
+					array("name" => "2", "status" => "1"),
 				)),
 				array("name" => "node3", "status" => "OK", "bricks" => array(
 					array("name" => "1", "status" => "0"),
-					array("name" => "2", "status" => "9"),
+					array("name" => "2", "status" => "1"),
 				)),
 				array("name" => "node4", "status" => "OK", "bricks" => array(
 					array("name" => "1", "status" => "0"),
-					array("name" => "2", "status" => "9"),
+					array("name" => "2", "status" => "1"),
 				)),
 			)),
 			array("name" => "cluster02", "description" => "cluster02", "nodes" => array(
 				array("name" => "node1", "status" => "OK", "bricks" => array(
 					array("name" => "1", "status" => "0"),
-					array("name" => "2", "status" => "9"),
+					array("name" => "2", "status" => "1"),
 				)),
 				array("name" => "node2", "status" => "OK", "bricks" => array(
 					array("name" => "1", "status" => "0"),
-					array("name" => "2", "status" => "9"),
+					array("name" => "2", "status" => "1"),
 				)),
 				array("name" => "node3", "status" => "OK", "bricks" => array(
 					array("name" => "1", "status" => "0"),
-					array("name" => "2", "status" => "9"),
+					array("name" => "2", "status" => "1"),
 				)),
 				array("name" => "node4", "status" => "OK", "bricks" => array(
 					array("name" => "1", "status" => "0"),
-					array("name" => "2", "status" => "9"),
+					array("name" => "2", "status" => "1"),
 				)),
 			)),
 			array("name" => "cluster03", "description" => "cluster03", "nodes" => array(
 				array("name" => "node1", "status" => "OK", "bricks" => array(
 					array("name" => "1", "status" => "0"),
-					array("name" => "2", "status" => "9"),
+					array("name" => "2", "status" => "1"),
 				)),
 				array("name" => "node2", "status" => "OK", "bricks" => array(
 					array("name" => "1", "status" => "0"),
-					array("name" => "2", "status" => "9"),
+					array("name" => "2", "status" => "1"),
 				)),
 				array("name" => "node3", "status" => "OK", "bricks" => array(
 					array("name" => "1", "status" => "0"),
-					array("name" => "2", "status" => "9"),
+					array("name" => "2", "status" => "1"),
 				)),
 				array("name" => "node4", "status" => "OK", "bricks" => array(
 					array("name" => "1", "status" => "0"),
-					array("name" => "2", "status" => "9"),
+					array("name" => "2", "status" => "1"),
 				)),
 			)),
 		);
