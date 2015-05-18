@@ -19,6 +19,8 @@ Route::get('/', function()
 // Route::group(array('before' => 'auth', 'prefix' => 'api'), function()
 Route::group(array('prefix' => 'api'), function()
 {
+	Route::get('status/nodes/speed', 'StatusNodesController@getNodeSpeed');
+	
 	Route::resource('glusterfs/brick', 'GlusterfsBrickController');
 	Route::resource('glusterfs/node', 'GlusterfsNodeController');
 	Route::resource('glusterfs/workbench', 'GlusterfsWorkbenchController');
@@ -31,8 +33,6 @@ Route::group(array('prefix' => 'api'), function()
 	Route::resource('configuration/hosts', 'ConfigurationHostsController');
 	Route::resource('configuration/services', 'ConfigurationServicesController');
 	Route::resource('configuration/timeperiods', 'ConfigurationTimeperiodsController');
-
-	Route::get('status/nodes/speed', 'StatusNodesController@getNodeSpeed');
 });
 
 App::missing(function($exception)

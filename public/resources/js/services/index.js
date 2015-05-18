@@ -1,5 +1,6 @@
 define([
 	'./accountFactory',
+	'./chartFactory',
 	'./nagiosFactory',
 	'./dashboardGlusterfsBrickFactory',
 	'./dashboardGlusterfsNodeFactory',
