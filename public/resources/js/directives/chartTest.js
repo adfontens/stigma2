@@ -251,7 +251,7 @@ define(['./module', '../app-config'],
 					        newVal = point.y - inc;
 					    }
 
-					    point.update(newVal);
+					    point.update(inc);
 					}
 				}
 
