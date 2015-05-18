@@ -15,4 +15,7 @@
 	<div class="form-group text-right">	
 		<button type="button" class="btn btn-default btn-lg" ng-click="cancel()">List</button>
 	</div>
+	<div class="form-group">
+		<x-chart-test></x-chart-test>
+	</div>
 </div>

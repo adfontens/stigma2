@@ -31,6 +31,8 @@ Route::group(array('prefix' => 'api'), function()
 	Route::resource('configuration/hosts', 'ConfigurationHostsController');
 	Route::resource('configuration/services', 'ConfigurationServicesController');
 	Route::resource('configuration/timeperiods', 'ConfigurationTimeperiodsController');
+
+	Route::get('status/nodes/speed', 'StatusNodesController@getNodeSpeed');
 });
 
 App::missing(function($exception)

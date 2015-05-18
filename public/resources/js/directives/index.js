@@ -1,3 +1,4 @@
 define([
+	'./chartTest',
 	'./timeperiodAddRow'
 ], function() {});

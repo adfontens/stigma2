@@ -119,4 +119,9 @@ class StatusNodesController extends \BaseController {
 	}
 
 
+	public function getNodeSpeed() {
+		//
+	}
+
+
 }

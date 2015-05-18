@@ -1,4 +1,4 @@
-define(['./module'],
+define(['./module', 'highcharts-more', 'solid-gauge'],
 	function(controllers) {
 		'use strict';
 
