@@ -121,9 +121,17 @@ class StatusNodesController extends \BaseController {
 
 	public function getNodeSpeed() {
 		$speed = mt_rand(0, 200);
-		$rpm = mt_rand(0, 50) / 10;
 		$result = array(
 			"speed" => $speed,
+		);
+
+		return $result;
+	}
+
+
+	public function getNodeRpm() {
+		$rpm = mt_rand(0, 50) / 10;
+		$result = array(
 			"rpm" => $rpm,
 		);
 

@@ -7,6 +7,10 @@ define(['./implement', './module', '../app-config'],
 				getNodeSpeed: function() {
 					var url = appConfig.getConfiguration().home + '/api/status/nodes/speed';
 					return implement.httpGetServiceImpl($http, url);
+				},
+				getNodeRpm: function() {
+					var url = appConfig.getConfiguration().home + '/api/status/nodes/rpm';
+					return implement.httpGetServiceImpl($http, url);
 				}
 			}
 		});

@@ -17,5 +17,6 @@
 	</div>
 	<div class="form-group">
 		<x-chart-test></x-chart-test>
+		<x-chart-tester></x-chart-tester>
 	</div>
 </div>

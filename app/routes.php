@@ -20,6 +20,7 @@ Route::get('/', function()
 Route::group(array('prefix' => 'api'), function()
 {
 	Route::get('status/nodes/speed', 'StatusNodesController@getNodeSpeed');
+	Route::get('status/nodes/rpm', 'StatusNodesController@getNodeRpm');
 	
 	Route::resource('glusterfs/brick', 'GlusterfsBrickController');
 	Route::resource('glusterfs/node', 'GlusterfsNodeController');
