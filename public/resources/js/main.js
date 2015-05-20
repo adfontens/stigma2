@@ -1,9 +1,9 @@
 require.config({
 	baseUrl: 'resources/js',
 	paths: {
-		'highcharts': 'http://code.highcharts.com/highcharts',
-		'highcharts-more': 'http://code.highcharts.com/highcharts-more',
-		'solid-gauge': 'http://code.highcharts.com/modules/solid-gauge',
+		'highcharts': '../lib/highcharts/highcharts',
+		'highcharts-more': '../lib/highcharts/highcharts-more',
+		'solid-gauge': '../lib/highcharts/solid-gauge',
 		'ui.router': '../lib/angular/angular-ui-router.min',
 		'ui.bootstrap': '../lib/angular/ui-bootstrap-0.12.1.min',
 		'ui.bootstrap.tpls': '../lib/angular/ui-bootstrap-tpls-0.12.1.min',

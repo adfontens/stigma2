@@ -353,7 +353,7 @@ define(['./module', '../app-config'],
 		]);
 
 
-		directives.directive('chartTester', [
+		directives.directive('chartTest2', [
 			'ChartFactory',
 			function(ChartFactory) {
 				function build(gaugeOptions) {
