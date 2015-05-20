@@ -28,11 +28,11 @@
 	</div>
 </div>
 <div style="width: 98%; height: 300px; background: #212121; float: left; margin-top: 10px; margin-bottom: 10px;">
-	<iframe src="http://106.243.87.166:6060/stigma2/resources/lib/grafana/index.html#dashboard/db/volume-usage" id="glusterfsVolumeUsage" frameborder="0" width="100%" height="100%">이 브라우저는 iframe을 지원하지 않습니다.</iframe>
+	<iframe src="http://106.243.87.166:3001/dashboard/db/volume-usage?from=now-6h&to=now" id="glusterfsVolumeUsage" frameborder="0" width="100%" height="100%">이 브라우저는 iframe을 지원하지 않습니다.</iframe>
 </div>
 <div>
 	<div style="width: 48.7%; height: 235px; background: #212121; float: left; margin-right: 10px;">
-		<iframe src="http://106.243.87.166:6060/stigma2/resources/lib/grafana/index.html#dashboard/db/load-avg" id="glusterfsLoadAvg" frameborder="0" width="100%" height="100%">이 브라우저는 iframe을 지원하지 않습니다.</iframe>
+		<iframe src="http://106.243.87.166:3001/dashboard/db/load-avg?from=now-6h&to=now" id="glusterfsLoadAvg" frameborder="0" width="100%" height="100%">이 브라우저는 iframe을 지원하지 않습니다.</iframe>
 	</div>
 	<div style="width: 24%; height: 235px; background: #212121; float: left; margin-right: 10px;">
 		<div style="height: 25%; padding: 10px;"><span style="font-size: 20px;">WARNING</span></div>
