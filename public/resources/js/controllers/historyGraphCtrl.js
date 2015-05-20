@@ -3,8 +3,8 @@ define(['./module'],
 		'use strict';
 
 		controllers.controller('HistoryGraphCtrl', [
-			'$scope', '$state', 'HostFactory',
-			function($scope, $state, HostFactory) {
+			'$scope', '$state', 'SystemConfigurationHostFactory',
+			function($scope, $state, SystemConfigurationHostFactory) {
 				//
 			}
 		]);
