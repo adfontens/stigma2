@@ -27,5 +27,5 @@ define([
 	'./systemConfigurationServiceEdit',
 	'./systemConfigurationTimeperiodListCtrl',
 	'./systemConfigurationTimeperiodCreationCtrl',
-	'./systemConfigurationTimeperiodEditCtrl'
+	'./systemConfigurationTimeperiodEditCtrl',
 ], function() {});

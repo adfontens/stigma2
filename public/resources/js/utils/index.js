@@ -1,0 +1,4 @@
+define([
+	'./directiveTimeperiodFactory',
+	'./timestampFormatFactory',
+], function() {});

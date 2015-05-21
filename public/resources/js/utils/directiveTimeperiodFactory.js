@@ -1,8 +1,8 @@
 define(['./module'],
-	function(services) {
+	function(utils) {
 		'use strict';
 
-		services.factory('DirectiveTimeperiodFactory', function() {
+		utils.factory('DirectiveTimeperiodFactory', function() {
 			var timeperiods = {};
 
 			return {

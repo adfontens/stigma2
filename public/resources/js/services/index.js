@@ -4,7 +4,6 @@ define([
 	'./dashboardGlusterfsBrickFactory',
 	'./dashboardGlusterfsNodeFactory',
 	'./dashboardGlusterfsWorkbenchFactory',
-	'./directiveTimeperiodFactory',
 	'./nagiosFactory',
 	'./statusBrickFactory',
 	'./statusClusterFactory',
@@ -14,5 +13,5 @@ define([
 	'./systemConfigurationHostFactory',
 	'./systemConfigurationHostgroupFactory',
 	'./systemConfigurationServiceFactory',
-	'./systemConfigurationTimeperiodFactory'
+	'./systemConfigurationTimeperiodFactory',
 ], function() {});
