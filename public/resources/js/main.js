@@ -1,6 +1,9 @@
 require.config({
 	baseUrl: 'resources/js',
 	paths: {
+		'highcharts': '../lib/highcharts/highcharts',
+		'highcharts-more': '../lib/highcharts/highcharts-more',
+		'solid-gauge': '../lib/highcharts/solid-gauge',
 		'ui.router': '../lib/angular/angular-ui-router.min',
 		'ui.bootstrap': '../lib/angular/ui-bootstrap-0.12.1.min',
 		'ui.bootstrap.tpls': '../lib/angular/ui-bootstrap-tpls-0.12.1.min',
@@ -25,6 +28,15 @@ require.config({
 		},
 		'ui.router': {
 			deps: ['angular']
+		},
+		'highcharts': {
+			deps: ['jquery']
+		},
+		'highcharts-more': {
+			deps: ['jquery', 'highcharts']
+		},
+		'solid-gauge': {
+			deps: ['jquery', 'highcharts']
 		}
 	}
 });

@@ -1,0 +1,2 @@
+<iframe src="http://106.243.87.166:3001" id="grafana" frameborder="0" width="100%" height="1045px">이 브라우저는 iframe을 지원하지 않습니다.</iframe>
+<!-- <iframe src="/stigma2/resources/lib/grafana/index.html" id="grafana" frameborder="0" width="100%" height="1045px">이 브라우저는 iframe을 지원하지 않습니다.</iframe> -->

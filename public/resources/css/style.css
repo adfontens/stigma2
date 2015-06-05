@@ -51,6 +51,57 @@ textarea {
     padding-top: 2px;
     padding-bottom: 2px;
 }
+
+.brickBox {
+    position: relative;
+    width: 50px;
+    height: 30px;
+    padding: 10px;
+}
+
+.brickVerticalLine {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    border-left: 1px solid white;
+}
+
+.brickHorizontalLine {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    border-top: 1px solid white;
+}
+
+.brickCircle {
+    position: absolute;
+    top: 0;
+    left: 20%;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+}
+
+.disabled {
+    disabled: disabled;
+}
+
+.progress {
+    margin-bottom: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+}
 /* main Area End */
 
 

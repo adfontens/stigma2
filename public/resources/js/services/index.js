@@ -1,16 +1,17 @@
 define([
 	'./accountFactory',
+	'./chartFactory',
 	'./dashboardGlusterfsBrickFactory',
 	'./dashboardGlusterfsNodeFactory',
 	'./dashboardGlusterfsWorkbenchFactory',
-	'./dashboardOverviewFactory',
-	'./directiveTimeperiodFactory',
-	'./hostFactory',
 	'./nagiosFactory',
-	'./serviceFactory',
+	'./statusBrickFactory',
+	'./statusClusterFactory',
+	'./statusNodeFactory',
+	'./statusVolumeFactory',
 	'./systemConfigurationCommandFactory',
 	'./systemConfigurationHostFactory',
 	'./systemConfigurationHostgroupFactory',
 	'./systemConfigurationServiceFactory',
-	'./systemConfigurationTimeperiodFactory'
+	'./systemConfigurationTimeperiodFactory',
 ], function() {});
